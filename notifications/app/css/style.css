@@ -1,0 +1,5 @@
+﻿#QuickMenuDiv li a.menu_selected {
+  background: none repeat scroll 0 0 #444444;
+  border-left: thin outset #5c5c5c;
+  text-decoration: none;
+}
