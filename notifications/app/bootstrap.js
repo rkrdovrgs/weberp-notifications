@@ -9,11 +9,14 @@ $(function () {
             window.location = '../';
 
         var $canvasDiv = $html.find('#CanvasDiv');
-        $canvasDiv.find('#SubMenuDiv').html('').attr('ng-view', '').addClass('view-container');
+        $canvasDiv.find('#SubMenuDiv').html('')
+            .attr('ng-view', '')
+            .attr('ng-show', '!isViewLoading')
+            .addClass('view-container shuffle-animation');
         $('head').prepend($html.find('script,link'));
         $('body').html($canvasDiv.html());
 
-        $('#QuickMenuDiv a[href*="notifications"]').addClass('menu_selected');
+        $('#QuickMenuDiv a[href*="notifications"]').addClass('menu_selected').attr('href', '#/');
 
         angular.bootstrap(document, ['app']);
 
