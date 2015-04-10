@@ -3,7 +3,7 @@
     
     vm.messageCount = 0;
     vm.people = [];
-    vm.title = 'Dashboard';
+    vm.title = 'Historial de órdenes';
 
 
 }]);

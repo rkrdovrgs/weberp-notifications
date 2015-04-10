@@ -13,3 +13,12 @@
 #SubMenuDiv .navbar-nav > li > a {
   padding: 5px;
 }
+#SubMenuDiv .navbar-header {
+  height: 30px;
+}
+#SubMenuDiv .navbar-header .navbar-brand {
+  border-right: 1px solid white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+}
