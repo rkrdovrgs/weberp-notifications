@@ -6,7 +6,7 @@
             //$routeProvider.setBaseTemplateUrl('../app/views/');
             $routeProvider
                 .when("/", {
-                    templateUrl: "app/views/index.html"
+                    templateUrl: "app/views/dashboard.html"
                 })
                 .otherwise({ redirectTo: "/" });
         }

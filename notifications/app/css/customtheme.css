@@ -1,0 +1,560 @@
+﻿#SubMenuDiv {
+  /* Background colors */
+  /* Text colors */
+  /* Widget */
+  /* Widget colors */
+  /* Widget white extras */
+  /* Today datas */
+  /* #region Main Styles */
+  /*#region Splash */
+  /*#endregion*/
+  /* #endregion */
+  /*#region toastr */
+  /*#endregion */
+}
+#SubMenuDiv .blightblue {
+  background: #52b9e9 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bblue {
+  background: #1171a3 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bgreen {
+  background: #43c83c !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .borange {
+  background: #f88529 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bred {
+  background: #fa3031 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bviolet {
+  background: #932ab6 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .blightblue h2,
+#SubMenuDiv .blightblue h3,
+#SubMenuDiv .blightblue h3,
+#SubMenuDiv .blightblue h4,
+#SubMenuDiv .blightblue h5,
+#SubMenuDiv .blightblue h6,
+#SubMenuDiv .bblue h2,
+#SubMenuDiv .bblue h3,
+#SubMenuDiv .bblue h3,
+#SubMenuDiv .bblue h4,
+#SubMenuDiv .bblue h5,
+#SubMenuDiv .bblue h6,
+#SubMenuDiv .bgreen h2,
+#SubMenuDiv .bgreen h3,
+#SubMenuDiv .bgreen h3,
+#SubMenuDiv .bgreen h4,
+#SubMenuDiv .bgreen h5,
+#SubMenuDiv .bgreen h6,
+#SubMenuDiv .bred h2,
+#SubMenuDiv .bred h3,
+#SubMenuDiv .bred h3,
+#SubMenuDiv .bred h4,
+#SubMenuDiv .bred h5,
+#SubMenuDiv .bred h6,
+#SubMenuDiv .bviolet h2,
+#SubMenuDiv .bviolet h3,
+#SubMenuDiv .bviolet h3,
+#SubMenuDiv .bviolet h4,
+#SubMenuDiv .bviolet h5,
+#SubMenuDiv .bviolet h6,
+#SubMenuDiv .borange h2,
+#SubMenuDiv .borange h3,
+#SubMenuDiv .borange h3,
+#SubMenuDiv .borange h4,
+#SubMenuDiv .borange h5,
+#SubMenuDiv .borange h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .blightblue a,
+#SubMenuDiv .bblue a,
+#SubMenuDiv .bgreen a,
+#SubMenuDiv .bred a,
+#SubMenuDiv .borange a,
+#SubMenuDiv .bviolet a {
+  color: #eee !important;
+}
+#SubMenuDiv .blightblue a:hover,
+#SubMenuDiv .bblue a:hover,
+#SubMenuDiv .bgreen a:hover,
+#SubMenuDiv .bred a:hover,
+#SubMenuDiv .borange a:hover,
+#SubMenuDiv .bviolet a:hover {
+  color: #ddd !important;
+}
+#SubMenuDiv .lightblue {
+  color: #52b9e9 !important;
+}
+#SubMenuDiv .blue {
+  color: #1171a3 !important;
+}
+#SubMenuDiv .green {
+  color: #43c83c !important;
+}
+#SubMenuDiv .orange {
+  color: #f88529 !important;
+}
+#SubMenuDiv .red {
+  color: #fa3031 !important;
+}
+#SubMenuDiv .violet {
+  color: #932ab6 !important;
+}
+#SubMenuDiv .widget {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+#SubMenuDiv .widget hr {
+  margin: 4px 0;
+  padding: 4px 0;
+  border-top: 0;
+  border-bottom: 1px solid #ddd;
+}
+#SubMenuDiv .widget .table {
+  margin: 0;
+  width: 100%;
+}
+#SubMenuDiv .widget .table-bordered {
+  border: 0;
+}
+#SubMenuDiv .widget .table-bordered th {
+  border-bottom: 1px solid #ccc !important;
+}
+#SubMenuDiv .widget .table-bordered td {
+  border-top: 0 !important;
+  border-bottom: 1px solid #ccc !important;
+}
+#SubMenuDiv .widget .table-bordered td:first-child,
+#SubMenuDiv .widget .table-bordered th:first-child {
+  border-left: 0;
+}
+#SubMenuDiv .widget .padd {
+  padding: 15px;
+}
+#SubMenuDiv .widget .widget-head {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #777;
+  font-size: 18px;
+  padding: 12px 15px;
+}
+#SubMenuDiv .widget .widget-head .widget-icons i {
+  font-size: 14px;
+  margin: 0 4px;
+}
+#SubMenuDiv .widget .widget-head .widget-icons a {
+  color: #aaa;
+}
+#SubMenuDiv .widget .widget-head .widget-icons a:hover {
+  color: #888;
+}
+#SubMenuDiv .widget .widget-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#SubMenuDiv .widget .widget-foot {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding: 8px 15px;
+  font-size: 13px;
+  color: #555;
+}
+#SubMenuDiv .widget.wred .widget-head {
+  background-color: #fa3031;
+  border: 1px solid #fa3031;
+  color: #fff;
+}
+#SubMenuDiv .widget.wlightblue .widget-head {
+  background-color: #52b9e9;
+  border: 1px solid #52b9e9;
+  color: #fff;
+}
+#SubMenuDiv .widget.wblue .widget-head {
+  background-color: #1171a3;
+  border: 1px solid #1171a3;
+  color: #fff;
+}
+#SubMenuDiv .widget.wgreen .widget-head {
+  background-color: #43c83c;
+  border: 1px solid #43c83c;
+  color: #fff;
+}
+#SubMenuDiv .widget.worange .widget-head {
+  background-color: #f88529;
+  border: 1px solid #f88529;
+  color: #fff;
+}
+#SubMenuDiv .widget.wviolet .widget-head {
+  background-color: #932ab6;
+  border: 1px solid #932ab6;
+  color: #fff;
+}
+#SubMenuDiv .widget.wred .widget-head .widget-icons a,
+#SubMenuDiv .widget.wblue .widget-head .widget-icons a,
+#SubMenuDiv .widget.wlightblue .widget-head .widget-icons a,
+#SubMenuDiv .widget.worange .widget-head .widget-icons a,
+#SubMenuDiv .widget.wgreen .widget-head .widget-icons a,
+#SubMenuDiv .widget.wviolet .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.wred .widget-head .widget-icons a:hover,
+#SubMenuDiv .widget.wblue .widget-head .widget-icons a:hover,
+#SubMenuDiv .widget.wlightblue .widget-head .widget-icons a:hover,
+#SubMenuDiv .widget.worange .widget-head .widget-icons a:hover,
+#SubMenuDiv .widget.wgreen .widget-head .widget-icons a:hover,
+#SubMenuDiv .widget.wviolet .widget-head .widget-icons a:hover {
+  color: #eee;
+}
+#SubMenuDiv .widget .nav-tabs > li a {
+  padding: 5px 10px;
+}
+#SubMenuDiv .widget .nav-tabs {
+  margin-bottom: 5px;
+}
+#SubMenuDiv .widget .tab-content {
+  margin-bottom: 10px;
+}
+#SubMenuDiv .today-datas {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+#SubMenuDiv .today-datas li {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  padding: 1.5em 1em;
+  background-color: #f8f8f8;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  max-width: 100%;
+  text-align: center;
+  width: 155px;
+}
+#SubMenuDiv .today-datas li .spark {
+  margin-right: 10px;
+}
+#SubMenuDiv .today-datas li .datas-text {
+  font-size: 13px;
+  padding: 7px 0 0 0;
+  font-weight: normal;
+  width: 90px;
+}
+#SubMenuDiv .today-datas li .datas-text span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+#SubMenuDiv .today-datas li i {
+  font-size: 25px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+#SubMenuDiv .today-datas li .dial {
+  margin-right: 10px !important;
+}
+#SubMenuDiv .ng-cloak {
+  display: none !important;
+}
+#SubMenuDiv select > option {
+  color: black;
+}
+#SubMenuDiv input.form-control,
+#SubMenuDiv select.form-control,
+#SubMenuDiv textarea.form-control {
+  /*width: 205px;*/
+  width: 60%;
+  display: inline;
+  display: block;
+}
+#SubMenuDiv .widget .padd {
+  /*margin-bottom: 0;*/
+  /*padding: 1em 0;*/
+  height: 12em;
+}
+#SubMenuDiv .widget .padd.padd-tight {
+  padding: 6px;
+}
+#SubMenuDiv .list-flow.list-flow-tight {
+  width: 90px;
+}
+#SubMenuDiv .map {
+  height: 228px;
+}
+#SubMenuDiv .btn > i {
+  margin-right: 8px;
+}
+#SubMenuDiv .btn {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+#SubMenuDiv .btn.btn-notext > i {
+  margin-right: 0;
+}
+#SubMenuDiv .btn-group {
+  margin: .2em;
+}
+#SubMenuDiv small {
+  font-size: 14px;
+}
+#SubMenuDiv .text-subtle {
+  color: #b7b7b7;
+}
+#SubMenuDiv .page-title-subtle {
+  color: white;
+}
+#SubMenuDiv .page-title {
+  color: #EEE;
+  margin-right: 12px;
+}
+#SubMenuDiv .right {
+  clear: right;
+  float: right;
+}
+#SubMenuDiv .widget-content .padd:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #52b9e9;
+}
+#SubMenuDiv .widget-content .padd:hover * {
+  color: white;
+}
+#SubMenuDiv .list-flow {
+  margin: 6px;
+  float: left;
+  width: 110px;
+  height: 120px;
+  border-bottom: solid 0 transparent;
+  padding: 1.5% .5%;
+}
+#SubMenuDiv .name-stack h5 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 18px !important;
+}
+#SubMenuDiv .search-query {
+  margin: 2px auto 8px auto !important;
+}
+#SubMenuDiv .fa-search {
+  color: #FFFFFF;
+}
+#SubMenuDiv .form-search {
+  min-height: 2em;
+}
+#SubMenuDiv .input-group[class*="col-"] {
+  width: 80%;
+  margin: 0 1.5em;
+}
+#SubMenuDiv .user .user-pic {
+  display: block;
+  margin: auto;
+}
+#SubMenuDiv .user .user-details {
+  margin-left: 100px;
+  margin-right: 10px;
+}
+#SubMenuDiv .widget-content {
+  padding: 1em;
+  margin: 0;
+}
+#SubMenuDiv .stacked {
+  float: none !important;
+  display: block;
+  margin: auto;
+}
+#SubMenuDiv .navbar .navbar-brand {
+  background: url(/content/images/icon.png) no-repeat left center !important;
+  margin: 0 1em;
+}
+#SubMenuDiv .navbar .brand-title {
+  margin-left: 2em;
+  color: #FFFFFF;
+}
+#SubMenuDiv .navbar-logo img {
+  height: 20px;
+}
+#SubMenuDiv .today-datas li {
+  padding: 20px 14px;
+}
+#SubMenuDiv #splash-page {
+  z-index: 99999 !important;
+}
+#SubMenuDiv #splash-page .bar {
+  width: 100%;
+}
+#SubMenuDiv .page-splash {
+  z-index: 99999 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: .9;
+  pointer-events: auto;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+#SubMenuDiv .page-splash-message {
+  text-align: center;
+  margin: 20% auto 0 auto;
+  font-size: 400%;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  -webkit-text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F58A00;
+  padding: 0;
+}
+#SubMenuDiv .page-splash-message.page-splash-message-subtle {
+  margin: 30% auto 0 auto;
+  font-size: 200%;
+}
+#SubMenuDiv .fa-asterisk.fa-asterisk-large {
+  font-size: 180%;
+  vertical-align: middle;
+  color: #F58A00;
+}
+#SubMenuDiv .fa-asterisk.fa-asterisk-alert {
+  color: #F58A00;
+}
+#SubMenuDiv .fa-asterisk-inline {
+  padding: 0 4px 0 0;
+}
+#SubMenuDiv .progress,
+#SubMenuDiv .page-progress-bar {
+  margin: 30px 10% !important;
+}
+#SubMenuDiv .spinner {
+  margin: 20% auto 0 auto;
+  left: auto;
+  top: auto !important;
+}
+#SubMenuDiv table th > a {
+  font-weight: bold;
+}
+#SubMenuDiv .table-hover tbody tr:hover > td,
+#SubMenuDiv .table-hover tbody tr:hover > th {
+  cursor: pointer;
+}
+#SubMenuDiv .widget-content.referrer {
+  border-width: 0;
+}
+#SubMenuDiv a {
+  cursor: pointer;
+}
+#SubMenuDiv #toast-container.toast-top-full-width > div,
+#SubMenuDiv #toast-container.toast-bottom-full-width > div {
+  margin: 4px auto;
+}
+/*#region wrapper for angular ng-include and ng-view animations*/
+.view-container {
+  position: relative;
+  overflow: hidden;
+}
+/*#endregion */
+/*#region Angular ng-include, ng-view, ng-repeat shuffle animations*/
+.shuffle-animation.ng-enter,
+.shuffle-animation.ng-leave {
+  position: relative;
+}
+.shuffle-animation.ng-enter {
+  -moz-transition: ease-out all 0.3s 0.4s;
+  -o-transition: ease-out all 0.3s 0.4s;
+  -webkit-transition: ease-out all 0.3s 0.4s;
+  transition: ease-out all 0.3s 0.4s;
+  left: 2em;
+  opacity: 0;
+}
+.shuffle-animation.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+.shuffle-animation.ng-leave {
+  -moz-transition: 0.3s ease-out all;
+  -o-transition: 0.3s ease-out all;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+  left: 0;
+  opacity: 1;
+}
+.shuffle-animation.ng-leave.ng-leave-active {
+  left: 2em;
+  opacity: 0;
+}
+/*#endregion*/
+/*#region Angular ng-include, ng-view, ng-repeat fader animation */
+.fader-animation.ng-enter,
+.fader-animation.ng-leave,
+.fader-animation.ng-move {
+  position: relative;
+}
+.fader-animation.ng-enter,
+.fader-animation.ng-leave {
+  -webkit-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) all 0.5s;
+  -moz-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) all 0.5s;
+  -o-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) all 0.5s;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) all 0.5s;
+  opacity: 1;
+}
+.fader-animation.ng-enter,
+.fader-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.fader-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.fader-animation.ng-move {
+  opacity: 0.5;
+}
+.fader-animation.ng-move.ng-move-active {
+  opacity: 1;
+}
+/*#endregion*/
+/*#region Angular ng-show dissolve animation */
+.dissolve-animation.ng-hide-remove {
+  display: inline !important;
+}
+.dissolve-animation.ng-hide-remove,
+.dissolve-animation.ng-hide-add {
+  -webkit-transition: 0.8s linear all;
+  -moz-transition: 0.8s linear all;
+  -o-transition: 0.8s linear all;
+  transition: 0.8s linear all;
+}
+.dissolve-animation.ng-hide-remove.ng-hide-remove-active,
+.dissolve-animation.ng-hide-add {
+  opacity: 1;
+}
+.dissolve-animation.ng-hide-add.ng-hide-add-active,
+.dissolve-animation.ng-hide-remove {
+  opacity: 0;
+}

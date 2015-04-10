@@ -9,7 +9,7 @@ $(function () {
             window.location = '../';
 
         var $canvasDiv = $html.find('#CanvasDiv');
-        $canvasDiv.find('#SubMenuDiv').html('').attr('ng-view', '');
+        $canvasDiv.find('#SubMenuDiv').html('').attr('ng-view', '').addClass('view-container');
         $('head').prepend($html.find('script,link'));
         $('body').html($canvasDiv.html());
 

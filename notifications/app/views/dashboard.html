@@ -1,0 +1,86 @@
+﻿<section id="dashboard-view" class="mainbar" data-ng-controller="dashboard as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="today-datas">
+                        <li class="blightblue">
+                            <div class="pull-left"><i class="glyphicon glyphicon-warning-sign"></i></div>
+                            <div class="datas-text pull-right">
+                                <span class="bold">50</span>
+                                Productos bajos en stock
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+
+                        <li class="borange">
+                            <div class="pull-left"><i class="glyphicon glyphicon-credit-card"></i></div>
+                            <div class="datas-text pull-right">
+                                <span class="bold">{{vm.messageCount}}</span>
+                                Créditos pendiente
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        
+                        <li class="bblue">
+                            <div class="pull-left"><i class="glyphicon glyphicon-flag"></i></div>
+                            <div class="datas-text pull-right">
+                                <span class="bold">30</span>
+                                Productos no vendidos
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="widget wviolet">
+                        <div data-cc-widget-header title="Ultimas transacciones bancarias"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <table class="table table-condensed table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No. Cuenta</th>
+                                        <th></th>
+                                        <th>Fecha</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="p in vm.people">
+                                        <td>{{p.firstName}}</td>
+                                        <td>{{p.lastName}}</td>
+                                        <td>{{p.age}}</td>
+                                        <td>{{p.location}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix">
+                                <a>Ver mas...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="widget wgreen">
+                        <div data-cc-widget-header title="Historial de ordenes"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <small>Historial aqui!!!</small>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix">
+                                <a>Ver mas...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
