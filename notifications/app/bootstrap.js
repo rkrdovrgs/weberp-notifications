@@ -14,7 +14,7 @@ $(function () {
             .attr('ng-show', '!isViewLoading')
             .addClass('view-container shuffle-animation');
         $('head').prepend($html.find('script,link'));
-        $('body').html($canvasDiv.html());
+        $('body').hide().html($canvasDiv.html()).fadeIn('medium');
 
         $('#QuickMenuDiv a[href*="notifications"]').addClass('menu_selected').attr('href', '#/');
 
