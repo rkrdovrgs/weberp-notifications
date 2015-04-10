@@ -1,68 +1,81 @@
-﻿#SubMenuDiv {
-    /* Background colors */
-    .blightblue {
-        background: #52b9e9 !important;
+﻿@bblack: #5c5c5c;
+@blightblue: #52b9e9;
+@bblue: #1171a3;
+@bgreen: #43c83c;
+@bred: #fa3031;
+@borange: #f88529;
+@bviolet: #932ab6;
+
+.bcolor(@background-color) {
+    background: @background-color !important;
+    color: #fff !important;
+    border: 0 !important;
+
+    h2, h3, h3, h4, h5, h6 {
         color: #fff !important;
-        border: 0 !important;
+    }
+
+    a {
+        color: white !important;
+    }
+
+    a:hover {
+        color: #eee !important;
+    }
+}
+
+
+.wcolor(@background-color) {
+    .widget-head {
+        background-color: @background-color;
+        border: 1px solid @background-color;
+        color: #fff;
+        a{
+            color:white;
+        }
+
+        .widget-icons a {
+            color: #fff;
+        }
+
+        .widget-icons a:hover {
+            color: #eee;
+        }
+    }
+}
+
+
+#SubMenuDiv {
+    /*#region Background colors */
+    .blightblue {
+        .bcolor(@blightblue);
     }
 
     .bblue {
-        background: #1171a3 !important;
-        color: #fff !important;
-        border: 0 !important;
+        .bcolor(@bblue);
+    }
+
+    .bblack {
+        .bcolor(@bblack);
     }
 
     .bgreen {
-        background: #43c83c !important;
-        color: #fff !important;
-        border: 0 !important;
+        .bcolor(@bgreen);
     }
 
     .borange {
-        background: #f88529 !important;
-        color: #fff !important;
-        border: 0 !important;
+        .bcolor(@borange);
     }
 
     .bred {
-        background: #fa3031 !important;
-        color: #fff !important;
-        border: 0 !important;
+        .bcolor(@bred);
     }
 
     .bviolet {
-        background: #932ab6 !important;
-        color: #fff !important;
-        border: 0 !important;
+        .bcolor(@bviolet);
     }
-
-    .blightblue h2, .blightblue h3, .blightblue h3, .blightblue h4, .blightblue h5, .blightblue h6,
-    .bblue h2, .bblue h3, .bblue h3, .bblue h4, .bblue h5, .bblue h6,
-    .bgreen h2, .bgreen h3, .bgreen h3, .bgreen h4, .bgreen h5, .bgreen h6,
-    .bred h2, .bred h3, .bred h3, .bred h4, .bred h5, .bred h6,
-    .bviolet h2, .bviolet h3, .bviolet h3, .bviolet h4, .bviolet h5, .bviolet h6,
-    .borange h2, .borange h3, .borange h3, .borange h4, .borange h5, .borange h6 {
-        color: #fff !important;
-    }
-
-    .blightblue a,
-    .bblue a,
-    .bgreen a,
-    .bred a,
-    .borange a,
-    .bviolet a {
-        color: #eee !important;
-    }
-
-    .blightblue a:hover,
-    .bblue a:hover,
-    .bgreen a:hover,
-    .bred a:hover,
-    .borange a:hover,
-    .bviolet a:hover {
-        color: #ddd !important;
-    }
-    /* Text colors */
+    /*#endregion Background colors */
+    /*#region Text colors */
     .lightblue {
         color: #52b9e9 !important;
     }
@@ -86,7 +99,8 @@
     .violet {
         color: #932ab6 !important;
     }
-    /* Widget */
+    /*#endregion Text colors */
+    /*#region Widget */
     .widget {
         margin-top: 10px;
         margin-bottom: 20px;
@@ -161,60 +175,37 @@
         font-size: 13px;
         color: #555;
     }
+    /*#endregion Widget */
     /* Widget colors */
-    .widget.wred .widget-head {
-        background-color: #fa3031;
-        border: 1px solid #fa3031;
-        color: #fff;
+    .widget.wred {
+        .wcolor(@bred);
     }
 
-    .widget.wlightblue .widget-head {
-        background-color: #52b9e9;
-        border: 1px solid #52b9e9;
-        color: #fff;
+    .widget.wblack {
+        .wcolor(@bblack);
     }
 
-    .widget.wblue .widget-head {
-        background-color: #1171a3;
-        border: 1px solid #1171a3;
-        color: #fff;
+    .widget.wlightblue {
+        .wcolor(@blightblue);
     }
 
-    .widget.wgreen .widget-head {
-        background-color: #43c83c;
-        border: 1px solid #43c83c;
-        color: #fff;
+    .widget.wblue {
+        .wcolor(@bblue);
     }
 
-    .widget.worange .widget-head {
-        background-color: #f88529;
-        border: 1px solid #f88529;
-        color: #fff;
+    .widget.wgreen {
+        .wcolor(@bgreen);
     }
 
-    .widget.wviolet .widget-head {
-        background-color: #932ab6;
-        border: 1px solid #932ab6;
-        color: #fff;
+    .widget.worange {
+        .wcolor(@borange);
     }
 
-    .widget.wred .widget-head .widget-icons a,
-    .widget.wblue .widget-head .widget-icons a,
-    .widget.wlightblue .widget-head .widget-icons a,
-    .widget.worange .widget-head .widget-icons a,
-    .widget.wgreen .widget-head .widget-icons a,
-    .widget.wviolet .widget-head .widget-icons a {
-        color: #fff;
+    .widget.wviolet {
+        .wcolor(@bviolet);
     }
-
-    .widget.wred .widget-head .widget-icons a:hover,
-    .widget.wblue .widget-head .widget-icons a:hover,
-    .widget.wlightblue .widget-head .widget-icons a:hover,
-    .widget.worange .widget-head .widget-icons a:hover,
-    .widget.wgreen .widget-head .widget-icons a:hover,
-    .widget.wviolet .widget-head .widget-icons a:hover {
-        color: #eee;
-    }
+    
+    
     /* Widget white extras */
     .widget .nav-tabs > li a {
         padding: 5px 10px;
@@ -526,7 +517,6 @@
         cursor: pointer;
     }
     /* #endregion */
-
     /*#region toastr */
     #toast-container.toast-top-full-width > div, #toast-container.toast-bottom-full-width > div {
         margin: 4px auto;
@@ -534,99 +524,99 @@
     /*#endregion */
 }
 
-    /*#region wrapper for angular ng-include and ng-view animations*/
-    .view-container {
-        position: relative;
-        overflow: hidden;
-    }
-    /*#endregion */
-    /*#region Angular ng-include, ng-view, ng-repeat shuffle animations*/
-    .shuffle-animation.ng-enter,
-    .shuffle-animation.ng-leave {
-        position: relative;
-    }
+/*#region wrapper for angular ng-include and ng-view animations*/
+.view-container {
+    position: relative;
+    overflow: hidden;
+}
+/*#endregion */
+/*#region Angular ng-include, ng-view, ng-repeat shuffle animations*/
+.shuffle-animation.ng-enter,
+.shuffle-animation.ng-leave {
+    position: relative;
+}
 
-    .shuffle-animation.ng-enter {
-        -moz-transition: ease-out all 0.3s 0.4s;
-        -o-transition: ease-out all 0.3s 0.4s;
-        -webkit-transition: ease-out all 0.3s 0.4s;
-        transition: ease-out all 0.3s 0.4s;
-        left: 2em;
-        opacity: 0;
-    }
+.shuffle-animation.ng-enter {
+    -moz-transition: ease-out all 0.3s 0.4s;
+    -o-transition: ease-out all 0.3s 0.4s;
+    -webkit-transition: ease-out all 0.3s 0.4s;
+    transition: ease-out all 0.3s 0.4s;
+    left: 2em;
+    opacity: 0;
+}
 
-    .shuffle-animation.ng-enter.ng-enter-active {
-        left: 0;
-        opacity: 1;
-    }
+.shuffle-animation.ng-enter.ng-enter-active {
+    left: 0;
+    opacity: 1;
+}
 
-    .shuffle-animation.ng-leave {
-        -moz-transition: 0.3s ease-out all;
-        -o-transition: 0.3s ease-out all;
-        -webkit-transition: 0.3s ease-out all;
-        transition: 0.3s ease-out all;
-        left: 0;
-        opacity: 1;
-    }
+.shuffle-animation.ng-leave {
+    -moz-transition: 0.3s ease-out all;
+    -o-transition: 0.3s ease-out all;
+    -webkit-transition: 0.3s ease-out all;
+    transition: 0.3s ease-out all;
+    left: 0;
+    opacity: 1;
+}
 
-    .shuffle-animation.ng-leave.ng-leave-active {
-        left: 2em;
-        opacity: 0;
-    }
-    /*#endregion*/
-    /*#region Angular ng-include, ng-view, ng-repeat fader animation */
-    .fader-animation.ng-enter,
-    .fader-animation.ng-leave,
-    .fader-animation.ng-move {
-        position: relative;
-    }
+.shuffle-animation.ng-leave.ng-leave-active {
+    left: 2em;
+    opacity: 0;
+}
+/*#endregion*/
+/*#region Angular ng-include, ng-view, ng-repeat fader animation */
+.fader-animation.ng-enter,
+.fader-animation.ng-leave,
+.fader-animation.ng-move {
+    position: relative;
+}
 
-    .fader-animation.ng-enter,
-    .fader-animation.ng-leave {
-        -webkit-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-        -moz-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-        -o-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-        transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-        opacity: 1;
-    }
+.fader-animation.ng-enter,
+.fader-animation.ng-leave {
+    -webkit-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
+    -moz-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
+    -o-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
+    transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
+    opacity: 1;
+}
 
-    .fader-animation.ng-enter,
-    .fader-animation.ng-leave.ng-leave-active {
-        opacity: 0;
-    }
+.fader-animation.ng-enter,
+.fader-animation.ng-leave.ng-leave-active {
+    opacity: 0;
+}
 
-    .fader-animation.ng-enter.ng-enter-active {
-        opacity: 1;
-    }
+.fader-animation.ng-enter.ng-enter-active {
+    opacity: 1;
+}
 
-    .fader-animation.ng-move {
-        opacity: 0.5;
-    }
+.fader-animation.ng-move {
+    opacity: 0.5;
+}
 
-    .fader-animation.ng-move.ng-move-active {
-        opacity: 1;
-    }
-    /*#endregion*/
-    /*#region Angular ng-show dissolve animation */
-    .dissolve-animation.ng-hide-remove {
-        display: inline !important;
-    }
+.fader-animation.ng-move.ng-move-active {
+    opacity: 1;
+}
+/*#endregion*/
+/*#region Angular ng-show dissolve animation */
+.dissolve-animation.ng-hide-remove {
+    display: inline !important;
+}
 
-    .dissolve-animation.ng-hide-remove,
-    .dissolve-animation.ng-hide-add {
-        -webkit-transition: 0.8s linear all;
-        -moz-transition: 0.8s linear all;
-        -o-transition: 0.8s linear all;
-        transition: 0.8s linear all;
-    }
+.dissolve-animation.ng-hide-remove,
+.dissolve-animation.ng-hide-add {
+    -webkit-transition: 0.8s linear all;
+    -moz-transition: 0.8s linear all;
+    -o-transition: 0.8s linear all;
+    transition: 0.8s linear all;
+}
 
-    .dissolve-animation.ng-hide-remove.ng-hide-remove-active,
-    .dissolve-animation.ng-hide-add {
-        opacity: 1;
-    }
+.dissolve-animation.ng-hide-remove.ng-hide-remove-active,
+.dissolve-animation.ng-hide-add {
+    opacity: 1;
+}
 
-    .dissolve-animation.ng-hide-add.ng-hide-add-active,
-    .dissolve-animation.ng-hide-remove {
-        opacity: 0;
-    }
-    /*#endregion */
+.dissolve-animation.ng-hide-add.ng-hide-add-active,
+.dissolve-animation.ng-hide-remove {
+    opacity: 0;
+}
+/*#endregion */

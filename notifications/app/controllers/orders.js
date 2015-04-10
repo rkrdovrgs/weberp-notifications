@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('dashboard', [function () {
+﻿angular.module('app').controller('orders', [function () {
     var vm = this;
     
     vm.messageCount = 0;

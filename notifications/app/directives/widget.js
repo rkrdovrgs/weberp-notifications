@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function () {
     'use strict';
 
     var app = angular.module('app');
@@ -63,7 +63,7 @@
         }
     });
 
-    app.directive('ccWidgetHeader', function() {
+    app.directive('ccWidgetHeader', function () {
         //Usage:
         //<div data-cc-widget-header title="vm.map.title"></div>
         var directive = {
@@ -72,7 +72,8 @@
                 'title': '@',
                 'subtitle': '@',
                 'rightText': '@',
-                'allowCollapse': '@'
+                'allowCollapse': '@',
+                'href': '@'
             },
             templateUrl: 'app/templates/widgetheader.html',
             restrict: 'A',

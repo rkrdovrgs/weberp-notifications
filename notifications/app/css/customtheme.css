@@ -1,7 +1,10 @@
 ﻿#SubMenuDiv {
-  /* Background colors */
-  /* Text colors */
-  /* Widget */
+  /*#region Background colors */
+  /*#endregion Background colors */
+  /*#region Text colors */
+  /*#endregion Text colors */
+  /*#region Widget */
+  /*#endregion Widget */
   /* Widget colors */
   /* Widget white extras */
   /* Today datas */
@@ -17,61 +20,82 @@
   color: #fff !important;
   border: 0 !important;
 }
+#SubMenuDiv .blightblue h2,
+#SubMenuDiv .blightblue h3,
+#SubMenuDiv .blightblue h3,
+#SubMenuDiv .blightblue h4,
+#SubMenuDiv .blightblue h5,
+#SubMenuDiv .blightblue h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .blightblue a {
+  color: white !important;
+}
+#SubMenuDiv .blightblue a:hover {
+  color: #eee !important;
+}
 #SubMenuDiv .bblue {
   background: #1171a3 !important;
   color: #fff !important;
   border: 0 !important;
+}
+#SubMenuDiv .bblue h2,
+#SubMenuDiv .bblue h3,
+#SubMenuDiv .bblue h3,
+#SubMenuDiv .bblue h4,
+#SubMenuDiv .bblue h5,
+#SubMenuDiv .bblue h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .bblue a {
+  color: white !important;
+}
+#SubMenuDiv .bblue a:hover {
+  color: #eee !important;
+}
+#SubMenuDiv .bblack {
+  background: #5c5c5c !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bblack h2,
+#SubMenuDiv .bblack h3,
+#SubMenuDiv .bblack h3,
+#SubMenuDiv .bblack h4,
+#SubMenuDiv .bblack h5,
+#SubMenuDiv .bblack h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .bblack a {
+  color: white !important;
+}
+#SubMenuDiv .bblack a:hover {
+  color: #eee !important;
 }
 #SubMenuDiv .bgreen {
   background: #43c83c !important;
   color: #fff !important;
   border: 0 !important;
 }
-#SubMenuDiv .borange {
-  background: #f88529 !important;
-  color: #fff !important;
-  border: 0 !important;
-}
-#SubMenuDiv .bred {
-  background: #fa3031 !important;
-  color: #fff !important;
-  border: 0 !important;
-}
-#SubMenuDiv .bviolet {
-  background: #932ab6 !important;
-  color: #fff !important;
-  border: 0 !important;
-}
-#SubMenuDiv .blightblue h2,
-#SubMenuDiv .blightblue h3,
-#SubMenuDiv .blightblue h3,
-#SubMenuDiv .blightblue h4,
-#SubMenuDiv .blightblue h5,
-#SubMenuDiv .blightblue h6,
-#SubMenuDiv .bblue h2,
-#SubMenuDiv .bblue h3,
-#SubMenuDiv .bblue h3,
-#SubMenuDiv .bblue h4,
-#SubMenuDiv .bblue h5,
-#SubMenuDiv .bblue h6,
 #SubMenuDiv .bgreen h2,
 #SubMenuDiv .bgreen h3,
 #SubMenuDiv .bgreen h3,
 #SubMenuDiv .bgreen h4,
 #SubMenuDiv .bgreen h5,
-#SubMenuDiv .bgreen h6,
-#SubMenuDiv .bred h2,
-#SubMenuDiv .bred h3,
-#SubMenuDiv .bred h3,
-#SubMenuDiv .bred h4,
-#SubMenuDiv .bred h5,
-#SubMenuDiv .bred h6,
-#SubMenuDiv .bviolet h2,
-#SubMenuDiv .bviolet h3,
-#SubMenuDiv .bviolet h3,
-#SubMenuDiv .bviolet h4,
-#SubMenuDiv .bviolet h5,
-#SubMenuDiv .bviolet h6,
+#SubMenuDiv .bgreen h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .bgreen a {
+  color: white !important;
+}
+#SubMenuDiv .bgreen a:hover {
+  color: #eee !important;
+}
+#SubMenuDiv .borange {
+  background: #f88529 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
 #SubMenuDiv .borange h2,
 #SubMenuDiv .borange h3,
 #SubMenuDiv .borange h3,
@@ -80,21 +104,49 @@
 #SubMenuDiv .borange h6 {
   color: #fff !important;
 }
-#SubMenuDiv .blightblue a,
-#SubMenuDiv .bblue a,
-#SubMenuDiv .bgreen a,
-#SubMenuDiv .bred a,
-#SubMenuDiv .borange a,
-#SubMenuDiv .bviolet a {
+#SubMenuDiv .borange a {
+  color: white !important;
+}
+#SubMenuDiv .borange a:hover {
   color: #eee !important;
 }
-#SubMenuDiv .blightblue a:hover,
-#SubMenuDiv .bblue a:hover,
-#SubMenuDiv .bgreen a:hover,
-#SubMenuDiv .bred a:hover,
-#SubMenuDiv .borange a:hover,
+#SubMenuDiv .bred {
+  background: #fa3031 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bred h2,
+#SubMenuDiv .bred h3,
+#SubMenuDiv .bred h3,
+#SubMenuDiv .bred h4,
+#SubMenuDiv .bred h5,
+#SubMenuDiv .bred h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .bred a {
+  color: white !important;
+}
+#SubMenuDiv .bred a:hover {
+  color: #eee !important;
+}
+#SubMenuDiv .bviolet {
+  background: #932ab6 !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#SubMenuDiv .bviolet h2,
+#SubMenuDiv .bviolet h3,
+#SubMenuDiv .bviolet h3,
+#SubMenuDiv .bviolet h4,
+#SubMenuDiv .bviolet h5,
+#SubMenuDiv .bviolet h6 {
+  color: #fff !important;
+}
+#SubMenuDiv .bviolet a {
+  color: white !important;
+}
 #SubMenuDiv .bviolet a:hover {
-  color: #ddd !important;
+  color: #eee !important;
 }
 #SubMenuDiv .lightblue {
   color: #52b9e9 !important;
@@ -181,44 +233,96 @@
   border: 1px solid #fa3031;
   color: #fff;
 }
+#SubMenuDiv .widget.wred .widget-head a {
+  color: white;
+}
+#SubMenuDiv .widget.wred .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.wred .widget-head .widget-icons a:hover {
+  color: #eee;
+}
+#SubMenuDiv .widget.wblack .widget-head {
+  background-color: #5c5c5c;
+  border: 1px solid #5c5c5c;
+  color: #fff;
+}
+#SubMenuDiv .widget.wblack .widget-head a {
+  color: white;
+}
+#SubMenuDiv .widget.wblack .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.wblack .widget-head .widget-icons a:hover {
+  color: #eee;
+}
 #SubMenuDiv .widget.wlightblue .widget-head {
   background-color: #52b9e9;
   border: 1px solid #52b9e9;
   color: #fff;
+}
+#SubMenuDiv .widget.wlightblue .widget-head a {
+  color: white;
+}
+#SubMenuDiv .widget.wlightblue .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.wlightblue .widget-head .widget-icons a:hover {
+  color: #eee;
 }
 #SubMenuDiv .widget.wblue .widget-head {
   background-color: #1171a3;
   border: 1px solid #1171a3;
   color: #fff;
 }
+#SubMenuDiv .widget.wblue .widget-head a {
+  color: white;
+}
+#SubMenuDiv .widget.wblue .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.wblue .widget-head .widget-icons a:hover {
+  color: #eee;
+}
 #SubMenuDiv .widget.wgreen .widget-head {
   background-color: #43c83c;
   border: 1px solid #43c83c;
   color: #fff;
+}
+#SubMenuDiv .widget.wgreen .widget-head a {
+  color: white;
+}
+#SubMenuDiv .widget.wgreen .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.wgreen .widget-head .widget-icons a:hover {
+  color: #eee;
 }
 #SubMenuDiv .widget.worange .widget-head {
   background-color: #f88529;
   border: 1px solid #f88529;
   color: #fff;
 }
+#SubMenuDiv .widget.worange .widget-head a {
+  color: white;
+}
+#SubMenuDiv .widget.worange .widget-head .widget-icons a {
+  color: #fff;
+}
+#SubMenuDiv .widget.worange .widget-head .widget-icons a:hover {
+  color: #eee;
+}
 #SubMenuDiv .widget.wviolet .widget-head {
   background-color: #932ab6;
   border: 1px solid #932ab6;
   color: #fff;
 }
-#SubMenuDiv .widget.wred .widget-head .widget-icons a,
-#SubMenuDiv .widget.wblue .widget-head .widget-icons a,
-#SubMenuDiv .widget.wlightblue .widget-head .widget-icons a,
-#SubMenuDiv .widget.worange .widget-head .widget-icons a,
-#SubMenuDiv .widget.wgreen .widget-head .widget-icons a,
+#SubMenuDiv .widget.wviolet .widget-head a {
+  color: white;
+}
 #SubMenuDiv .widget.wviolet .widget-head .widget-icons a {
   color: #fff;
 }
-#SubMenuDiv .widget.wred .widget-head .widget-icons a:hover,
-#SubMenuDiv .widget.wblue .widget-head .widget-icons a:hover,
-#SubMenuDiv .widget.wlightblue .widget-head .widget-icons a:hover,
-#SubMenuDiv .widget.worange .widget-head .widget-icons a:hover,
-#SubMenuDiv .widget.wgreen .widget-head .widget-icons a:hover,
 #SubMenuDiv .widget.wviolet .widget-head .widget-icons a:hover {
   color: #eee;
 }

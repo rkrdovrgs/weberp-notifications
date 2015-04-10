@@ -62,6 +62,11 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\bootstrap.js" />
+    <Content Include="app\controllers\credits.js" />
+    <Content Include="app\controllers\products.js" />
+    <Content Include="app\controllers\transactions.js" />
+    <Content Include="app\controllers\orders.js" />
+    <Content Include="app\controllers\stock.js" />
     <Content Include="app\controllers\dashboard.js" />
     <Content Include="app\css\bootstrap-theme.css">
       <DependentUpon>bootstrap-theme.less</DependentUpon>
@@ -80,8 +85,14 @@
     <Content Include="app\css\toastr.css" />
     <Content Include="app\directives\widget.js" />
     <Content Include="app\startup\route-config.js" />
+    <Content Include="app\templates\navigation.html" />
     <Content Include="app\templates\widgetheader.html" />
     <Content Include="app\views\dashboard.html" />
+    <Content Include="app\views\products.html" />
+    <Content Include="app\views\credits.html" />
+    <Content Include="app\views\transactions.html" />
+    <Content Include="app\views\orders.html" />
+    <Content Include="app\views\stock.html" />
     <Content Include="bower_components\angular-animate\angular-animate.js" />
     <Content Include="bower_components\angular-animate\angular-animate.min.js" />
     <Content Include="bower_components\angular-animate\index.js" />

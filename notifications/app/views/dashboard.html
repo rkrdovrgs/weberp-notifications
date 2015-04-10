@@ -5,30 +5,36 @@
                 <div class="col-md-12">
                     <ul class="today-datas">
                         <li class="blightblue">
-                            <div class="pull-left"><i class="glyphicon glyphicon-warning-sign"></i></div>
-                            <div class="datas-text pull-right">
-                                <span class="bold">50</span>
-                                Productos bajos en stock
-                            </div>
-                            <div class="clearfix"></div>
+                            <a href="#/stock">
+                                <div class="pull-left"><i class="glyphicon glyphicon-warning-sign"></i></div>
+                                <div class="datas-text pull-right">
+                                    <span class="bold">50</span>
+                                    Productos bajos en stock
+                                </div>
+                                <div class="clearfix"></div>
+                            </a>
                         </li>
 
                         <li class="borange">
-                            <div class="pull-left"><i class="glyphicon glyphicon-credit-card"></i></div>
-                            <div class="datas-text pull-right">
-                                <span class="bold">{{vm.messageCount}}</span>
-                                Créditos pendiente
-                            </div>
-                            <div class="clearfix"></div>
+                            <a href="#/credits">
+                                <div class="pull-left"><i class="glyphicon glyphicon-credit-card"></i></div>
+                                <div class="datas-text pull-right">
+                                    <span class="bold">{{vm.messageCount}}</span>
+                                    Créditos pendiente
+                                </div>
+                                <div class="clearfix"></div>
+                            </a>
                         </li>
-                        
+
                         <li class="bblue">
-                            <div class="pull-left"><i class="glyphicon glyphicon-flag"></i></div>
-                            <div class="datas-text pull-right">
-                                <span class="bold">30</span>
-                                Productos no vendidos
-                            </div>
-                            <div class="clearfix"></div>
+                            <a href="#/products">
+                                <div class="pull-left"><i class="glyphicon glyphicon-flag"></i></div>
+                                <div class="datas-text pull-right">
+                                    <span class="bold">30</span>
+                                    Productos no vendidos
+                                </div>
+                                <div class="clearfix"></div>
+                            </a>
                         </li>
 
                     </ul>
@@ -36,8 +42,9 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="widget wviolet">
+                    <div class="widget wblack">
                         <div data-cc-widget-header title="Ultimas transacciones bancarias"
+                             href="#/transactions"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
                             <table class="table table-condensed table-striped">
@@ -61,21 +68,22 @@
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix">
-                                <a>Ver mas...</a>
+                                <a href="#/transactions">Ver mas...</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="widget wgreen">
+                    <div class="widget wblack">
                         <div data-cc-widget-header title="Historial de ordenes"
+                             href="#/orders"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
                             <small>Historial aqui!!!</small>
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix">
-                                <a>Ver mas...</a>
+                                <a href="#/orders">Ver mas...</a>
                             </div>
                         </div>
                     </div>

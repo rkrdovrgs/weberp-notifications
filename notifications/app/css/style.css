@@ -3,3 +3,13 @@
   border-left: thin outset #5c5c5c;
   text-decoration: none;
 }
+#SubMenuDiv .navbar-default {
+  background-color: #5c5c5c;
+  min-height: 40px;
+}
+#SubMenuDiv .navbar-default a {
+  color: white !important;
+}
+#SubMenuDiv .navbar-nav > li > a {
+  padding: 5px;
+}

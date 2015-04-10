@@ -28,8 +28,13 @@
     <!-- directives -->
     <script src="app/directives/widget.js"></script>
 
-    <!-- controllers -->
+    <!-- controllers -->    
     <script src="app/controllers/dashboard.js"></script>
+    <script src="app/controllers/stock.js"></script>
+    <script src="app/controllers/credits.js"></script>
+    <script src="app/controllers/orders.js"></script>
+    <script src="app/controllers/products.js"></script>
+    <script src="app/controllers/transactions.js"></script>
 
     <!--  -->
 </head>
