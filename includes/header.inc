@@ -70,7 +70,7 @@
 		echo '<li><a href="'.$RootPath.'/index.php">' . _('Main Menu') . '</a></li>'; //take off inline formatting, use CSS instead ===HJ===
 
 		if (count($_SESSION['AllowedPageSecurityTokens'])>1){
-			echo '<li><a href="'.$RootPath.'/notifications">' . _('Notificaciones') . '</a></li>';
+			echo '<li><a id="notifications-link" href="'.$RootPath.'/notifications">' . _('Notificaciones') . ' <i></i></a></li>';
 			echo '<li><a href="'.$RootPath.'/SelectCustomer.php">' . _('Customers') . '</a></li>';
 			echo '<li><a href="'.$RootPath.'/SelectProduct.php">' . _('Items')     . '</a></li>';
 			echo '<li><a href="'.$RootPath.'/SelectSupplier.php">' . _('Suppliers') . '</a></li>';
@@ -91,6 +91,8 @@
 		echo '<li><a href="'.$RootPath.'/Logout.php" onclick="return confirm(\''._('Are you sure you wish to logout?').'\');">' . _('Logout') . '</a></li>';
 
 		echo '</ul></div>'; // QuickMenuDiv
+		echo '<script src="/weberp/notifications/sse/notifier.js"></script>';
+		
 	}
 	echo '</div>'; // HeaderWrapDiv
 	echo '</div>'; // Headerdiv

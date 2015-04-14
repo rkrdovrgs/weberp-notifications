@@ -77,6 +77,9 @@
     <Content Include="app\css\customtheme.css">
       <DependentUpon>customtheme.less</DependentUpon>
     </Content>
+    <Content Include="app\css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="app\fonts\fontawesome-webfont.svg" />
     <Content Include="app\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="app\css\style.css">
@@ -189,6 +192,8 @@
     <Content Include="bower_components\jquery\src\var\support.js" />
     <Content Include="bower_components\jquery\src\var\toString.js" />
     <Content Include="bower_components\jquery\src\wrap.js" />
+    <Content Include="sse\notifications.txt" />
+    <Content Include="sse\notifier.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower_components\jquery\.bower.json" />
@@ -240,6 +245,22 @@
     <Content Include="app\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="app\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="app\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sse\notify.php" />
+    <Content Include="sse\ssserver.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\css\elements.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\css\style.css.map">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="api\status.php" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

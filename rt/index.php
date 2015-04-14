@@ -18,20 +18,17 @@
 		};
 		*/
 		
-		
-		var source = new EventSource("ssserver.php");
+		var uid = "UID" + new Date().getTime() + Math.random().toString().replace('.', '');
+		console.log(uid);
+		var source = new EventSource("ssserver.php?uid=" + uid);
 		source.onmessage = function(event) {
-			console.log(event.data);
+			console.log(event.data, new Date());
 		};
 		
-		function sendMessage(){
-			$.get('ssserver.php?msg=hello!');
-		}
 		
 	</script>
 
 </head>
 <body>
-	<input type="button" value="Click" onclick="sendMessage()"/>
 </body>
 </html>

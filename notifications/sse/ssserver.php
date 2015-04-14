@@ -30,7 +30,7 @@ $lastNotification = date($date);
 
 
 
-if($lastCheck === null || $lastNotification === null || $lastCheck < $lastNotification){
+if($lastCheck !== null && $lastCheck < $lastNotification){
 	$resp = new stdClass;
 	$resp->lastCheck = $lastCheck;
 	$resp->lastNotification = $lastNotification;
@@ -41,6 +41,8 @@ if($lastCheck === null || $lastNotification === null || $lastCheck < $lastNotifi
 	sendMsg($uid, $message);
 }
 else{
+    if($lastCheck === null)
+        $_SESSION[$uid] = $lastNotification;
 	echo "retry: $retry" . PHP_EOL;
 }
 
