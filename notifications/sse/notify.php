@@ -6,7 +6,7 @@
 	
 	$notificationType = $_GET['type'];
 	$typeId = query_object("
-		select id from notificationtype where name = '$notificationType'
+		select id from notificationType where name = '$notificationType'
 	")->id;
 	
 	$msg = '';
@@ -21,9 +21,9 @@
 	}
 	
 	mysql_query("
-		insert into notification (notificationTypeId, message, userId)
+		insert into notification (notificationTypeId, message, userId) 
 		values($typeId, '$msg', '$userid')
-	");
+	") or die('Query failed: ' . mysql_error());;
 	
 	
 
