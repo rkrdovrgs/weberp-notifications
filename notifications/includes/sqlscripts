@@ -1,0 +1,54 @@
+CREATE TABLE IF NOT EXISTS `notificationType` (
+  `id` INT NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `notification` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `notificationTypeId` int(11) NOT NULL,
+  `message` varchar(1000) NOT NULL,
+  `dateAndTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `userId` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_notificationTypeId_idx` (`notificationTypeId`),
+  CONSTRAINT `FK_notificationTypeId` FOREIGN KEY (`notificationTypeId`) REFERENCES `notificationType` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `notificationCheck` (
+  `userId` varchar(250) NOT NULL,
+  `dateAndTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `notificationType`
+SELECT * FROM (SELECT 1,'stock',NULL) AS tmp
+WHERE NOT EXISTS (
+    SELECT id FROM `notificationType` WHERE id = 1
+) LIMIT 1;
+
+INSERT INTO `notificationType`
+SELECT * FROM (SELECT 2,'credits',NULL) AS tmp
+WHERE NOT EXISTS (
+    SELECT id FROM `notificationType` WHERE id = 2
+) LIMIT 1;
+
+INSERT INTO `notificationType`
+SELECT * FROM (SELECT 3,'products',NULL) AS tmp
+WHERE NOT EXISTS (
+    SELECT id FROM `notificationType` WHERE id = 3
+) LIMIT 1;
+
+INSERT INTO `notificationType`
+SELECT * FROM (SELECT 4,'transactions',NULL) AS tmp
+WHERE NOT EXISTS (
+    SELECT id FROM `notificationType` WHERE id = 4
+) LIMIT 1;
+
+INSERT INTO `notificationType`
+SELECT * FROM (SELECT 5,'orders',NULL) AS tmp
+WHERE NOT EXISTS (
+    SELECT id FROM `notificationType` WHERE id = 5
+) LIMIT 1;

@@ -1237,7 +1237,7 @@ if (((isset($_SESSION['CustomerRecord'])
 if (isset($_SESSION['ReceiptBatch']->Items) AND count($_SESSION['ReceiptBatch']->Items) > 0){
 	echo '<div class="centre">
 			<br/>
-			<input tabindex="13" type="submit" name="CommitBatch" value="' . _('Accept and Process Batch') . '" />
+			<input notify="transactions" tabindex="13" type="submit" name="CommitBatch" value="' . _('Accept and Process Batch') . '" />
 		</div>';
 }
 echo '</div>';

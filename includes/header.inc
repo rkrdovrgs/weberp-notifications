@@ -91,7 +91,8 @@
 		echo '<li><a href="'.$RootPath.'/Logout.php" onclick="return confirm(\''._('Are you sure you wish to logout?').'\');">' . _('Logout') . '</a></li>';
 
 		echo '</ul></div>'; // QuickMenuDiv
-		echo '<script src="/weberp/notifications/sse/notifier.js"></script>';
+		include('notifications/includes/header.inc');
+		
 		
 	}
 	echo '</div>'; // HeaderWrapDiv

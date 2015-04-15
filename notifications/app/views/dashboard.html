@@ -19,7 +19,7 @@
                             <a href="#/credits">
                                 <div class="pull-left"><i class="glyphicon glyphicon-credit-card"></i></div>
                                 <div class="datas-text pull-right">
-                                    <span class="bold">{{vm.messageCount}}</span>
+                                    <span class="bold">0</span>
                                     Créditos pendiente
                                 </div>
                                 <div class="clearfix"></div>
@@ -87,6 +87,20 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="container-fluid">
+            <h4 class="page-header">Notificaciones</h4>
+            <div class="row" ng-repeat="ntf in vm.notifications">
+                <div class="col-sm-12">
+                    <p>
+                        <label class="label label-default">{{ntf.dateAndTime}}</label>
+                        {{ntf.message}}
+                    </p>
                 </div>
             </div>
         </div>

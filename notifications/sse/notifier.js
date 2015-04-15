@@ -1,51 +1,69 @@
-﻿(function () {
-    var jQueryScriptOutputted = false, openingTunnel = true;
-    function initJQuery() {
+﻿$(function () {
+    var openingTunnel = true;
+    var uid = "UID" + new Date().getTime() + Math.random().toString().replace('.', '');
+    var source = new EventSource("/weberp/notifications/sse/ssserver.php?uid=" + uid);
 
-        //if the jQuery object isn't available
-        if (typeof (jQuery) == 'undefined') {
-
-            if (!jQueryScriptOutputted) {
-                //only output the script once..
-                jQueryScriptOutputted = true;
-                document.write("<scr" + "ipt type='text/javascript' src='/weberp/notifications/bower_components/jquery/dist/jquery.js'></scr" + "ipt>");
-            }
-            setTimeout(function () { initJQuery(); }, 500);
-        } else {
-
-            $(function () {
-
-                var uid = "UID" + new Date().getTime() + Math.random().toString().replace('.', '');
-                var source = new EventSource("/weberp/notifications/sse/ssserver.php?uid=" + uid);
-
-                source.onopen = function (event) {
-                    $.get('/weberp/notifications/api/status.php', function (data) {
-
-                        $('#notifications-link i')[data.count > 0 ? 'show' : 'hide']()
-                            .text(data.count)
-                            .css({
-                                'border-radius': '25px',
-                                'padding': '4px 9px',
-                                'background-color': '#F88529',
-                                'margin-left': '5px',
-                                'font-style': 'normal',
-                                'font-size': '11px'
-                            });
-                    });
-                };
-                source.onmessage = function (event) {
-                    if (openingTunnel) return openingTunnel = false;
-                    $.get('/weberp/notifications/api/feed.php', function (data) {
-                        
-                        $('#notifications-link i')[data.count > 0 ? 'show' : 'hide']()
-                            .text(data.count);
-                    });
-                };
-            });
-        }
-
+    
+    function onopen(event) {
+        toastr.options.closeButton = true;
+        toastr.options.positionClass = "toast-bottom-left";
+        toastr.options.newestOnTop = false;
+        $.get('/weberp/notifications/api/status.php', function (data) {
+            $('#notifications-link i')[data.count > 0 ? 'show' : 'hide']()
+                .text(data.count);
+        });
     }
-    initJQuery();
+
+    function onmessage(event) {
+
+        $.get('/weberp/notifications/api/feed.php', function (data) {
+
+            $('#notifications-link i')[data.count > 0 ? 'show' : 'hide']()
+                .text(data.count);
+
+            $.each(data.notifications, function (key, ntf) {
+                toastr.info(ntf.message);
+            });
+            if (data.count > 3)
+                toastr.warning('Hay mas notificaciones pendientes!');
+
+        });
+
+        $(document).trigger('newNotification');
+        
+    }
+
+    source.onmessage = function (event) {
+        if (openingTunnel) {
+            onopen(event);
+            openingTunnel = false;
+        }
+        else
+            onmessage(event);       
+        
+    };
 
 
-})();
+
+    $(document).on('click', ':submit[notify]', function (e) {
+
+
+        var sbmt = $(this);
+
+        if (sbmt.attr('has-notified') != undefined) return;
+
+        e.preventDefault();
+        e.returnValue = false;
+
+        $.ajax({
+            url: '/weberp/notifications/sse/notify.php?type=' + sbmt.attr('notify'),
+            type: 'POST',
+            data: sbmt.parent('form').serialize(),
+            complete: function () {
+                sbmt.attr('has-notified', true);
+                sbmt.click();
+            }
+        });
+    });
+
+});
