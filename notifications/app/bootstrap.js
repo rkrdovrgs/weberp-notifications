@@ -13,7 +13,8 @@ $(function () {
             .attr('ng-view', '')
             .attr('ng-show', '!isViewLoading')
             .addClass('view-container shuffle-animation');
-        $('head').prepend($html.find('script,link'));
+        $('head').prepend($html.find('script'))
+            .append($html.find('link'));
         $('body').html($canvasDiv.html());
 
         $('#notifications-link').addClass('menu_selected').attr('href', '#/');

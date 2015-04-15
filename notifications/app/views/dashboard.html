@@ -50,25 +50,29 @@
                             <table class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
-                                        <th>No. Cuenta</th>
-                                        <th></th>
                                         <th>Fecha</th>
+                                        <th>Tipo</th>
+                                        <th>No.</th>
+                                        <th></th>
+                                        <th>Moneda</th>
                                         <th>Cantidad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr data-ng-repeat="p in vm.people">
-                                        <td>{{p.firstName}}</td>
-                                        <td>{{p.lastName}}</td>
-                                        <td>{{p.age}}</td>
-                                        <td>{{p.location}}</td>
+                                    <tr data-ng-repeat="trn in vm.transactions">
+                                        <td>{{trn.transdate}}</td>
+                                        <td>{{trn.typename}}</td>
+                                        <td>{{trn.transno}}</td>
+                                        <td>{{trn.banktranstype}}</td>
+                                        <td>{{trn.currcode}}</td>
+                                        <td>{{trn.amount}}</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix">
-                                <a href="#/transactions">Ver mas...</a>
+                                <a href="#/transactions">Ver todas...</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +102,7 @@
             <div class="row" ng-repeat="ntf in vm.notifications">
                 <div class="col-sm-12">
                     <p>
-                        <label class="label label-default">{{ntf.dateAndTime}}</label>
+                        <label class="label label-default">{{ntf.dateAndTime | date:'medium'}}</label>
                         {{ntf.message}}
                     </p>
                 </div>

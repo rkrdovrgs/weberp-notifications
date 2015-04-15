@@ -205,6 +205,7 @@
     <Content Include="bower_components\toastr\README.md" />
     <Content Include="bower_components\toastr\toastr.less" />
     <Content Include="bower_components\toastr\toastr.scss" />
+    <Content Include="api\transactions.php" />
     <None Include="includes\sqlmigrator.php" />
     <None Include="includes\sqlscripts" />
     <Content Include="scripts\jquery-loader.js" />
