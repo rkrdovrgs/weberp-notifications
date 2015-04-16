@@ -13,7 +13,8 @@ $status = mysql_query_single("
 				from notificationCheck
 				where userId = '$userid'
 				limit 1
-			), dateAndTime);
+			), dateAndTime)
+			and userId <> '$userid';
 	");
 
 echo json_encode($status);

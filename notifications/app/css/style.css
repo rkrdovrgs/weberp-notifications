@@ -37,4 +37,6 @@
   font-weight: bold;
   padding: 8px;
 }
-/*# sourceMappingURL=style.css.map */
+#SubMenuDiv .padding {
+  padding: 20px;
+}

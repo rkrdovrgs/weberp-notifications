@@ -3,7 +3,7 @@
     var uid = "UID" + new Date().getTime() + Math.random().toString().replace('.', '');
     var source = new EventSource("/weberp/notifications/sse/ssserver.php?uid=" + uid);
 
-    
+
     function onopen(event) {
         toastr.options.closeButton = true;
         toastr.options.positionClass = "toast-bottom-left";
@@ -17,21 +17,22 @@
 
     function onmessage(event) {
 
-        $.get('/weberp/notifications/api/feed.php', function (data) {
+        $.get('/weberp/notifications/api/feed.php', { current: $('#notifications-link i').text() }, function (data) {
 
             $('#notifications-link i')[data.count > 0 ? 'show' : 'hide']()
                 .text(data.count);
 
-            $.each(data.notifications, function (key, ntf) {
-                toastr.info(ntf.message);
+            $.each(data.notifications, function (idx, ntf) {
+                if (idx < 3)
+                    toastr.info(ntf.message);
             });
-            if (data.count > 3)
+            if (data.notifications.length > 3)
                 toastr.warning('Hay mas notificaciones pendientes!');
 
         });
 
         $(document).trigger('newNotification');
-        
+
     }
 
     source.onmessage = function (event) {
@@ -40,8 +41,8 @@
             openingTunnel = false;
         }
         else
-            onmessage(event);       
-        
+            onmessage(event);
+
     };
 
 

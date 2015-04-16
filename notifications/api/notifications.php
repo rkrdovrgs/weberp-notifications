@@ -14,7 +14,7 @@
 		select id, notificationTypeId, message, dateAndTime, IF($lastChecked <= dateAndTime, true, false) isNew 
 		from notification
 		order by dateAndTime desc
-		limit 20;
+		limit 15;
 	");
 
 

@@ -1,27 +1,66 @@
 ﻿<section ng-controller="transactions as vm">
     <nav ng-include="'app/templates/navigation.html'"></nav>
-    <table class="table table-condensed table-striped">
-        <thead>
-            <tr>
-                <th>Fecha</th>
-                <th>Tipo</th>
-                <th>Referencia</th>
-                <th>No.</th>
-                <th></th>
-                <th>Moneda</th>
-                <th>Cantidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr data-ng-repeat="trn in vm.transactions">
-                <td>{{trn.transdate}}</td>
-                <td>{{trn.typename}}</td>
-                <td>{{trn.ref}}</td>
-                <td>{{trn.transno}}</td>
-                <td>{{trn.banktranstype}}</td>
-                <td>{{trn.currcode}}</td>
-                <td>{{trn.amount}}</td>
-            </tr>
-        </tbody>
-    </table>
+    
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="filters.transType" type="text" class="form-control" placeholder="Tipo de transaccion" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group input-group-sm">
+                    
+                    <input ng-model="filters.dateFrom" type="date" class="form-control" placeholder="Fecha [desde]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input ng-model="filters.dateTo" type="date" class="form-control" placeholder="Fecha [hasta]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
+                </div>
+            </div>
+            
+        </div>
+        <nav class="pull-right">
+            <ul class="pagination">
+                <li ng-click="filters.page<=1 || (filters.page=filters.page-1)">
+                    <a aria-label="Previous">
+                        <span aria-hidden="true">&laquo; Anterior</span>
+                    </a>
+                </li>
+                <li ng-click="vm.transactions.length<filters.rows || (filters.page=filters.page+1)">
+                    <a aria-label="Next">
+                        <span aria-hidden="true">Siguiente &raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <div class="padding">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Referencia</th>
+                    <th>No.</th>
+                    <th></th>
+                    <th>Moneda</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="trn in vm.transactions">
+                    <td>{{trn.transdate}}</td>
+                    <td>{{trn.typename}}</td>
+                    <td>{{trn.ref}}</td>
+                    <td>{{trn.transno}}</td>
+                    <td>{{trn.banktranstype}}</td>
+                    <td>{{trn.currcode}}</td>
+                    <td>{{trn.amount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>

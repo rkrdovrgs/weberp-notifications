@@ -17,6 +17,7 @@
 		default:
 			//TODO: Check if product is low in stock
 			$msg = 'Producto bajo en stock';
+			$userid = 'system';
 			break;
 	}
 	

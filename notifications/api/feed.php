@@ -4,21 +4,9 @@
 	include('../includes/sqlconnect.php');
 	header('Content-Type: application/json');
 
-	$feed = new stdClass;
+	$currentCount = $_GET['current'];
 
-	$feed->notifications = mysql_query_select("
-		select id, notificationTypeId, message, dateAndTime
-		from notification
-		where dateAndTime >=
-			ifnull((
-				select dateAndTime
-				from notificationCheck
-				where userId = '$userid'
-				limit 1
-			), dateAndTime)
-		order by dateAndTime desc
-		limit 3;
-	");
+	$feed = new stdClass;
 
 	$feed->count = mysql_query_single("
 		select count(*) count
@@ -29,8 +17,33 @@
 				from notificationCheck
 				where userId = '$userid'
 				limit 1
-			), dateAndTime);
+			), dateAndTime)
+			and userId <> '$userid';
 	")->count;
+
+	$limit = $feed->count - $currentCount;
+
+	$feed->notifications = mysql_query_select("
+		select *
+		from notification
+		where dateAndTime >=
+			ifnull((
+				select dateAndTime
+				from notificationCheck
+				where userId = '$userid'
+				limit 1
+			), dateAndTime)
+		order by dateAndTime desc
+		limit $limit;
+	");
+
+	$notifications = array();
+	foreach($feed->notifications as $nt){
+		if($nt->userId !== $userid)
+			$notifications[] = $nt;
+	}
+	$feed->notifications = $notifications;
+	
 
 
 	echo json_encode($feed);

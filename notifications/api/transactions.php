@@ -4,7 +4,21 @@ include('../includes/sqlconnect.php');
 header('Content-Type: application/json');
 $userid = $_SESSION['UserID'];
 
-$limit = $_GET['rows'];
+$filters = array();
+if($_GET['transType'] !== null)
+	$filters[] = "systypes.typename like '%" . $_GET['transType'] . "%'";
+if($_GET['dateFrom'] !== null)
+	$filters[] = "transdate >= '" . substr($_GET['dateFrom'], 0, 10) . "'";
+if($_GET['dateTo'] !== null)
+	$filters[] = "transdate <= '" . substr($_GET['dateTo'], 0, 10) . "'";
+
+$filters = sizeof($filters) > 0 ? "WHERE " . join(" AND ", $filters) : "";
+
+$rows = $_GET['rows'] ?: 10;
+$page = $_GET['page'] ?: 1;
+$start = ($page - 1) * $rows;
+
+
 $sql="SELECT 	banktrans.currcode,
 					banktrans.amount,
 					banktrans.amountcleared,
@@ -22,11 +36,11 @@ $sql="SELECT 	banktrans.currcode,
 				ON banktrans.bankact=bankaccounts.accountcode
 				INNER JOIN systypes
 				ON banktrans.type=systypes.typeid
-				ORDER BY banktrans.transdate desc";
+				$filters
+				ORDER BY banktrans.transdate desc
+				LIMIT $start, $rows";
 
-if($limit !== null)
-$sql .= " LIMIT $limit";
-
-echo json_encode(mysql_query_select($sql));
+$transactions = mysql_query_select($sql);
+echo json_encode($transactions);
 
 ?>
