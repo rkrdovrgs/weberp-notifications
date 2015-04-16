@@ -206,6 +206,8 @@
     <Content Include="bower_components\toastr\toastr.less" />
     <Content Include="bower_components\toastr\toastr.scss" />
     <Content Include="api\transactions.php" />
+    <Content Include="api\notifications.php" />
+    <Content Include="api\resetNotifications.php" />
     <None Include="includes\sqlmigrator.php" />
     <None Include="includes\sqlscripts" />
     <Content Include="scripts\jquery-loader.js" />

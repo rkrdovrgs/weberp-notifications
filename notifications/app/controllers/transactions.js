@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('transactions', function ($http) {
+﻿angular.module('app').controller('transactions', function ($http, $scope) {
     var vm = this;
 
     vm.title = 'Transacciones bancarias';
@@ -21,6 +21,6 @@
             });
     }
 
-    $(document).on('newNotification', refresh);
+    $scope.$on('newNotification', refresh);
 });
 

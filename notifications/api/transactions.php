@@ -27,6 +27,6 @@ $sql="SELECT 	banktrans.currcode,
 if($limit !== null)
 $sql .= " LIMIT $limit";
 
-echo query_json($sql);
+echo json_encode(mysql_query_select($sql));
 
 ?>

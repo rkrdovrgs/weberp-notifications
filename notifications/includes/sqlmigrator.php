@@ -5,7 +5,7 @@ $sqls = explode(';', fread($myfile,filesize("sqlscripts")));
 
 foreach ($sqls as $sql) {
 	if($sql !== '') {
-		mysql_query($sql) or die('Query failed: ' . mysql_error());
+		mysql_query_exec($sql);
 	}
 }
 ?>

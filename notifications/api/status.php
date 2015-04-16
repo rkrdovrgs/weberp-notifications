@@ -4,7 +4,7 @@ include('../includes/sqlconnect.php');
 header('Content-Type: application/json');
 
 $userid = $_SESSION['UserID'];
-$sql = "
+$status = mysql_query_single("
 		select count(*) count
 		from notification
 		where dateAndTime >=
@@ -14,8 +14,8 @@ $sql = "
 				where userId = '$userid'
 				limit 1
 			), dateAndTime);
-	";
+	");
 
-echo query_json($sql);
+echo json_encode($status);
 
 ?>

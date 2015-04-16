@@ -20,5 +20,10 @@
         $rootScope.$on('$routeChangeSuccess', function () {
             $rootScope.isViewLoading = false;
         });
+
+        $(document).on('newNotification', function() {
+            $rootScope.$broadcast('newNotification');
+        });
+
     }]);
 })();

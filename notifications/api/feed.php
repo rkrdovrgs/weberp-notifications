@@ -6,7 +6,7 @@
 
 	$feed = new stdClass;
 
-	$feed->notifications = query_object("
+	$feed->notifications = mysql_query_select("
 		select id, notificationTypeId, message, dateAndTime
 		from notification
 		where dateAndTime >=
@@ -20,7 +20,7 @@
 		limit 3;
 	");
 
-	$feed->count = query_object("
+	$feed->count = mysql_query_single("
 		select count(*) count
 		from notification
 		where dateAndTime >=

@@ -8,6 +8,7 @@
         toastr.options.closeButton = true;
         toastr.options.positionClass = "toast-bottom-left";
         toastr.options.newestOnTop = false;
+        toastr.options.timeOut = 7000;
         $.get('/weberp/notifications/api/status.php', function (data) {
             $('#notifications-link i')[data.count > 0 ? 'show' : 'hide']()
                 .text(data.count);
