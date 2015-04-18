@@ -60,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api\notifications.php" />
     <Content Include="api\feed.php" />
     <Content Include="api\status.php" />
     <Content Include="app\app.js" />
