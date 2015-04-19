@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-default">
+﻿<nav class="navbar navbar-default" ng-controller="navigation as nav">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand">{{vm.title}}</a>
@@ -10,13 +10,13 @@
             <ul class="nav navbar-nav">
                 <li><a class="btn btn-sm btn-toolbar" href="#/"><i class="glyphicon glyphicon-circle-arrow-left"></i> Notificaciones</a></li>
                 <li>
-                    <a class="btn btn-sm btn-toolbar" href="#/stock"><i class="glyphicon glyphicon-warning-sign"></i> 50</a>
+                    <a class="btn btn-sm btn-toolbar" href="#/stock"><i class="glyphicon glyphicon-warning-sign"></i> {{nav.notificationTypeCounter.stock}}</a>
                 </li>
                 <li>
-                    <a class="btn btn-sm btn-toolbar" href="#/credits"><i class="glyphicon glyphicon-credit-card"></i> 0</a>
+                    <a class="btn btn-sm btn-toolbar" href="#/credits"><i class="glyphicon glyphicon-credit-card"></i> {{nav.notificationTypeCounter.credits}}</a>
                 </li>
                 <li>
-                    <a class="btn btn-sm btn-toolbar" href="#/products"><i class="glyphicon glyphicon-flag"></i> 30</a>
+                    <a class="btn btn-sm btn-toolbar" href="#/products"><i class="glyphicon glyphicon-flag"></i> {{nav.notificationTypeCounter.products}}</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

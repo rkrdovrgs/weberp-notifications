@@ -60,12 +60,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api\notificationTypeCounter.php" />
     <Content Include="api\notifications.php" />
     <Content Include="api\feed.php" />
     <Content Include="api\status.php" />
+    <Content Include="api\transactions.php" />
     <Content Include="app\app.js" />
     <Content Include="app\bootstrap.js" />
     <Content Include="app\controllers\credits.js" />
+    <Content Include="app\controllers\navigation.js" />
     <Content Include="app\controllers\products.js" />
     <Content Include="app\controllers\transactions.js" />
     <Content Include="app\controllers\orders.js" />
@@ -77,12 +80,16 @@
     <Content Include="app\css\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
+    <Content Include="app\css\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
     <Content Include="app\css\customtheme.css">
       <DependentUpon>customtheme.less</DependentUpon>
     </Content>
     <Content Include="app\css\style.min.css">
       <DependentUpon>style.css</DependentUpon>
     </Content>
+    <Content Include="app\directives\pagination.js" />
     <Content Include="app\fonts\fontawesome-webfont.svg" />
     <Content Include="app\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="app\css\style.css">
@@ -92,6 +99,7 @@
     <Content Include="app\directives\widget.js" />
     <Content Include="app\startup\route-config.js" />
     <Content Include="app\templates\navigation.html" />
+    <Content Include="app\templates\pagination.html" />
     <Content Include="app\templates\widgetheader.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\products.html" />
@@ -206,8 +214,7 @@
     <Content Include="bower_components\toastr\README.md" />
     <Content Include="bower_components\toastr\toastr.less" />
     <Content Include="bower_components\toastr\toastr.scss" />
-    <Content Include="api\transactions.php" />
-    <Content Include="api\notifications.php" />
+    <Content Include="api\stock.php" />
     <Content Include="api\resetNotifications.php" />
     <None Include="includes\sqlmigrator.php" />
     <None Include="includes\sqlscripts" />

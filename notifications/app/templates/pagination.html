@@ -1,0 +1,12 @@
+﻿<ul class="pagination">
+    <li ng-click="filters.page<=1 || (filters.page=filters.page-1)">
+        <a aria-label="Previous">
+            <span aria-hidden="true">&laquo; Anterior</span>
+        </a>
+    </li>
+    <li ng-click="collection.length<filters.rows || (filters.page=filters.page+1)">
+        <a aria-label="Next">
+            <span aria-hidden="true">Siguiente &raquo;</span>
+        </a>
+    </li>
+</ul>

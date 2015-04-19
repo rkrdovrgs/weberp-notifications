@@ -1,4 +1,68 @@
 ﻿<section ng-controller="stock as vm">
     <nav ng-include="'app/templates/navigation.html'"></nav>
-    <table class="table table-hover"></table>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.description" type="text" class="form-control" placeholder="Descripcion" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.category" type="text" class="form-control" placeholder="Categoria" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.location" type="text" class="form-control" placeholder="Localidad" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.quantityFrom" type="number" class="form-control" placeholder="En existencia [desde]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3">-</span>
+                    <input ng-model="vm.filters.quantityTo" type="number" class="form-control" placeholder="En existencia [hasta]" aria-describedby="sizing-addon3">
+                </div>
+            </div>
+
+        </div>
+        <nav class="pull-right">
+            <pagination ng-model="vm.filters"
+                        ng-change="vm.refresh()"
+                        ng-collection="vm.transactions"></pagination>
+        </nav>
+    </section>
+    <div class="padding">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descripcion</th>
+                    <th>Categoria</th>
+                    <th>Localidad</th>
+                    <th>En existencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="st in vm.stock">
+                    <td>{{st.stockid}}</td>
+                    <td>{{st.description}}</td>
+                    <td>{{st.categorydescription}}</td>
+                    <td>{{st.locationname}}</td>
+                    <td>{{st.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>

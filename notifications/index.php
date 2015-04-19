@@ -3,7 +3,7 @@
 <head>
     <title>webERP - Notificaciones</title>
 
-    <link href="app/css/bootstrap.css" rel="stylesheet" />
+    <link href="app/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app/css/toastr.css" rel="stylesheet" />
     <link href="app/css/customtheme.css" rel="stylesheet" />
 	
@@ -25,6 +25,7 @@
 
     <!-- directives -->
     <script src="app/directives/widget.js"></script>
+	<script src="app/directives/pagination.js"></script>
 
     <!-- controllers -->    
     <script src="app/controllers/dashboard.js"></script>
@@ -33,6 +34,7 @@
     <script src="app/controllers/orders.js"></script>
     <script src="app/controllers/products.js"></script>
     <script src="app/controllers/transactions.js"></script>
+	<script src="app/controllers/navigation.js"></script>
 
     <!--  -->
 </head>
