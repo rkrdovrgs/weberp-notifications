@@ -4,6 +4,7 @@
     vm.title = 'Dashboard';
     vm.notifications = [];
     vm.transactions = [];
+    vm.orders = [];
     vm.notificationTypeCounter = {
         stock: 0,
         credits: 0,
@@ -26,6 +27,12 @@
         $http.get('/weberp/notifications/api/transactions.php', { params: { rows: 5 } })
             .success(function (data) {
                 angular.copy(data, vm.transactions);
+            });
+
+        //get order list
+        $http.get('/weberp/notifications/api/orders.php', { params: { rows: 5 } })
+            .success(function (data) {
+                angular.copy(data, vm.orders);
             });
 
         //get notifications list

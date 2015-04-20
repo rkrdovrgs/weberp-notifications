@@ -417,7 +417,7 @@ if (isset($_POST['SearchParts']) AND $_POST['SearchParts']!=''){
 					salesorders.deliverydate,
 					salesorders.deliverto
 				ORDER BY salesorders.orderno";
-
+echo $SQL;
 	$SalesOrdersResult = DB_query($SQL);
 
 	if (DB_error_no() !=0) {

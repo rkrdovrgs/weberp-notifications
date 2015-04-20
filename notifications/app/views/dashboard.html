@@ -83,7 +83,32 @@
                              href="#/orders"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
-                            <small>Historial aqui!!!</small>
+                            <table class="table table-condensed table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No. de orden</th>
+                                        <th>Cliente</th>
+                                        <th>Sucursal</th>
+                                        <th>Fecha de pedido</th>
+                                        <th>Total pedido</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="st in vm.orders">
+                                        <td>{{st.orderno}}</td>
+                                        <td>{{st.name}}</td>
+                                        <td>{{st.brname}}</td>
+                                        <td>{{st.orddate}}</td>
+                                        <td>{{st.ordervalue}}</td>
+                                        <td>
+                                            <i class="glyphicon"
+                                               ng-class="{'glyphicon-ok text-success':st.completed, 'glyphicon-transfer text-warning':!st.completed}">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix">

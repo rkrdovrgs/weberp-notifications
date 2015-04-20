@@ -1,4 +1,81 @@
 ﻿<section ng-controller="orders as vm">
     <nav ng-include="'app/templates/navigation.html'"></nav>
-    <table class="table table-hover"></table>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.client" type="text" class="form-control" placeholder="Cliente" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.branch" type="text" class="form-control" placeholder="Sucursal" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" id="sizing-addon3">
+                        <input ng-model="vm.filters.pendingOnly" type="checkbox">
+                    </span>
+                    <label class="form-control">Pendientes</label>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.dateFrom" type="date" class="form-control" placeholder="Pedido [desde]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input ng-model="vm.filters.dateTo" type="date" class="form-control" placeholder="Pedido [hasta]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
+                </div>
+            </div>
+
+        </div>
+        <nav class="pull-right">
+            <pagination ng-model="vm.filters"
+                        ng-change="vm.refresh()"
+                        ng-collection="vm.orders"></pagination>
+        </nav>
+    </section>
+    <div class="padding">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>No. de orden</th>
+                    <th>Cliente</th>
+                    <th>Sucursal</th>
+                    <th>Ref #</th>
+                    <th>Fecha de pedido</th>
+                    <th>Fecha de entrega solicitada</th>
+                    <th>Total pedido</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="st in vm.orders">
+                    <td>{{st.orderno}}</td>
+                    <td>{{st.name}}</td>
+                    <td>{{st.brname}}</td>
+                    <td>{{st.customerref}}</td>
+                    <td>{{st.orddate}}</td>
+                    <td>{{st.deliverydate}}</td>
+                    <td>{{st.ordervalue}}</td>
+                    <td>
+                        <i class="glyphicon"
+                           ng-class="{'glyphicon-ok text-success':st.completed, 'glyphicon-transfer text-warning':!st.completed}">
+                        </i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>

@@ -63,7 +63,9 @@
     <Content Include="api\notificationTypeCounter.php" />
     <Content Include="api\notifications.php" />
     <Content Include="api\feed.php" />
+    <Content Include="api\orders.php" />
     <Content Include="api\status.php" />
+    <Content Include="api\products.php" />
     <Content Include="api\transactions.php" />
     <Content Include="app\app.js" />
     <Content Include="app\bootstrap.js" />
