@@ -1,4 +1,58 @@
 ﻿<section ng-controller="credits as vm">
     <nav ng-include="'app/templates/navigation.html'"></nav>
-    <table class="table table-hover"></table>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.client" type="text" class="form-control" placeholder="Cliente" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="input-group input-group-sm">
+
+                    <input ng-model="vm.filters.dateFrom" type="date" class="form-control" placeholder="Pedido [desde]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input ng-model="vm.filters.dateTo" type="date" class="form-control" placeholder="Pedido [hasta]" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
+                </div>
+            </div>
+
+        </div>
+        <nav class="pull-right">
+            <pagination ng-model="vm.filters"
+                        ng-change="vm.refresh()"
+                        ng-collection="vm.credits"></pagination>
+        </nav>
+    </section>
+    <div class="padding">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Cliente</th>
+                    <th>Moneda</th>
+                    <th>Entradas</th>
+                    <th>Salidas</th>
+                    <th>Balance</th>
+                    <th>Fecha de pago</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="st in vm.credits">
+                    <td>{{st.debtorno}}</td>
+                    <td>{{st.name}}</td>
+                    <td>{{st.currency}}</td>
+                    <td>{{st.fxbalances_input}}</td>
+                    <td>{{st.fxbalances_output}}</td>
+                    <td>{{st.fxbalance}}</td>
+                    <td>{{st.duedate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>

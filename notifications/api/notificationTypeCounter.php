@@ -36,5 +36,18 @@
 	")->count;
 
 
+	$credits="
+		SELECT debtorsmaster.debtorno, 
+			SUM(debtortrans.ovamount + debtortrans.ovgst + debtortrans.ovfreight + debtortrans.ovdiscount - debtortrans.alloc) AS fxbalance
+		FROM debtorsmaster 
+			INNER JOIN currencies ON debtorsmaster.currcode = currencies.currabrev 
+			INNER JOIN debtortrans ON debtorsmaster.debtorno = debtortrans.debtorno 
+		GROUP BY debtorsmaster.debtorno, debtorsmaster.name, currencies.currency, currencies.decimalplaces
+		HAVING fxbalance > 0";
+	$typeCounter->credits = mysql_query_single("
+		SELECT count(*) count FROM ($credits) c
+	")->count;
+
+
 	echo json_encode($typeCounter);
 ?>
