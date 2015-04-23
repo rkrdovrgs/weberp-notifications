@@ -591,7 +591,7 @@ if (isset($_POST['CommitBatch'])){
 
 		DB_Txn_Commit();
 		prnMsg(_('Payment') . ' ' . $TransNo . ' ' . _('has been successfully entered'),'success');
-
+		echo '<img src="/weberp/notifications/sse/notify.php?type=transactions&transactionType=Egreso&amount=' . -$_SESSION['PaymentDetail' . $identifier]->Amount . '" style="display:none"/>';
 		$LastSupplier = ($_SESSION['PaymentDetail' . $identifier]->SupplierID);
 
 		unset($_POST['BankAccount']);

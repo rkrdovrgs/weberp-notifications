@@ -295,7 +295,10 @@ if (isset($_POST['CommitBatch'])){
 				<td>' . $_SESSION['ReceiptBatch']->DateBanked . '</td>
 				<td>' . $ReceiptItem->CustomerName . '</td>
 				<td>' . $ReceiptItem->GLCode.' - '.$myrow['accountname'] . '</td>
-				<td class="number">' . locale_number_format($ReceiptItem->Amount/$_SESSION['ReceiptBatch']->ExRate/$_SESSION['ReceiptBatch']->FunctionalExRate,$_SESSION['ReceiptBatch']->CurrDecimalPlaces)  . '</td>';
+				<td class="number">
+					<img src="/weberp/notifications/sse/notify.php?type=transactions&transactionType=Ingreso&amount=' . locale_number_format($ReceiptItem->Amount/$_SESSION['ReceiptBatch']->ExRate/$_SESSION['ReceiptBatch']->FunctionalExRate,$_SESSION['ReceiptBatch']->CurrDecimalPlaces)  . '" style="display:none"/>
+					' . locale_number_format($ReceiptItem->Amount/$_SESSION['ReceiptBatch']->ExRate/$_SESSION['ReceiptBatch']->FunctionalExRate,$_SESSION['ReceiptBatch']->CurrDecimalPlaces)  . '
+				</td>';
 
 		if ($ReceiptItem->GLCode ==''){
 			echo '<td><a target="_blank"  href="' . $RootPath . '/PDFReceipt.php?BatchNumber=' . $_SESSION['ReceiptBatch']->BatchNo. '&ReceiptNumber='.$CustomerReceiptCounter.'">' . _('Print a Customer Receipt') . '</a></td></tr>';
@@ -1237,7 +1240,7 @@ if (((isset($_SESSION['CustomerRecord'])
 if (isset($_SESSION['ReceiptBatch']->Items) AND count($_SESSION['ReceiptBatch']->Items) > 0){
 	echo '<div class="centre">
 			<br/>
-			<input notify="transactions" tabindex="13" type="submit" name="CommitBatch" value="' . _('Accept and Process Batch') . '" />
+			<input tabindex="13" type="submit" name="CommitBatch" value="' . _('Accept and Process Batch') . '" />
 		</div>';
 }
 echo '</div>';

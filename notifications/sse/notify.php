@@ -39,7 +39,10 @@
 
 			break;
 		case 'transactions':
-			$msg = $userid . ' realizo una nueva transaccion bancaria';
+			$transactionType = $_GET['transactionType'];
+			$amount = $_GET['amount'];
+			$msg = "$userid registro una nueva transaccion bancaria. $transactionType de $amount";
+			
 			mysql_query_exec("
 				insert into notification (notificationTypeId, message, userId) 
 				values($typeId, '$msg', '$userid')
