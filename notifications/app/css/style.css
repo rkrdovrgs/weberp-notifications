@@ -40,3 +40,9 @@
 #SubMenuDiv .padding {
   padding: 20px;
 }
+#SubMenuDiv .widget-content td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=style.css.map */

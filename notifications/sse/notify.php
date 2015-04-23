@@ -11,20 +11,41 @@
 	
 	$msg = '';
 	switch ($notificationType) {
+		case 'stock':
+			$orderno = $_GET['orderNumber'];
+			$stock = mysql_query_select("
+				SELECT sm.stockid,
+					sm.description,
+					ls.quantity
+				FROM stockmaster sm
+					INNER JOIN locstock ls ON sm.stockid=ls.stockid
+					INNER JOIN locations l ON ls.loccode = l.loccode
+					INNER JOIN locationusers lu ON lu.loccode=l.loccode AND lu.userid='$userid' AND lu.canview=1
+					INNER JOIN salesorderdetails sod ON sod.stkcode=sm.stockid
+						AND sod.orderno=$orderno
+				WHERE ls.quantity <= sm.shrinkfactor
+			");
+
+			$userid = '$$system$$';
+
+			foreach($stock as $st) {
+				$productDescription = $st->description;
+				$msg = "Producto \"$productDescription\" bajo en stock al realizar orden de venta #$orderno";
+				mysql_query_exec("
+					insert into notification (notificationTypeId, message, userId) 
+					values($typeId, '$msg', '$userid')
+				");
+			}
+
+			break;
 		case 'transactions':
 			$msg = $userid . ' realizo una nueva transaccion bancaria';
-			break;
-		default:
-			//TODO: Check if product is low in stock
-			$msg = 'Producto bajo en stock';
-			$userid = 'system';
+			mysql_query_exec("
+				insert into notification (notificationTypeId, message, userId) 
+				values($typeId, '$msg', '$userid')
+			");
 			break;
 	}
-	
-	mysql_query_exec("
-		insert into notification (notificationTypeId, message, userId) 
-		values($typeId, '$msg', '$userid')
-	");
 	
 	
 

@@ -590,6 +590,7 @@ if (isset($OK_to_PROCESS) AND $OK_to_PROCESS == 1 AND $_SESSION['ExistingOrder'.
 		prnMsg(_('Quotation Number') . ' ' . $OrderNo . ' ' . _('has been entered'),'success');
 	} else {
 		prnMsg(_('Order Number') . ' ' . $OrderNo . ' ' . _('has been entered'),'success');
+		echo '<img src="/weberp/notifications/sse/notify.php?type=stock&orderNumber=' . $OrderNo . '" style="display:none"/>';
 	}
 
 	if (count($_SESSION['AllowedPageSecurityTokens'])>1){
