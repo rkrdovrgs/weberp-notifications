@@ -6,7 +6,7 @@ $(function () {
         var $html = $('<div></div>').append(htmlStr);
 
         if ($html.find('title').text() === 'webERP Login screen')
-            window.location = '../';
+            window.location = '../?returnUrl=' + encodeURIComponent(window.location.pathname);
 
         var $canvasDiv = $html.find('#CanvasDiv');
         $canvasDiv.find('#SubMenuDiv').html('')

@@ -4,6 +4,11 @@
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+#QuickMenuDiv {
+  float: none;
+  position: absolute;
+  right: 0;
+}
 #QuickMenuDiv li a.menu_selected {
   background: none repeat scroll 0 0 #444444;
   border-left: thin outset #5c5c5c;

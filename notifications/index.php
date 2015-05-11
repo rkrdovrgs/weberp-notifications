@@ -1,11 +1,13 @@
+<?php $scriptVersion="?v=201504230437";
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>webERP - Notificaciones</title>
+    <title>webERP - Notifications</title>
 
     <link href="app/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app/css/toastr.css" rel="stylesheet" />
-    <link href="app/css/customtheme.css" rel="stylesheet" />
+    <link href="app/css/customtheme.css<?echo $scriptVersion?>" rel="stylesheet" />
 	
 
     <!-- libs -->
@@ -17,24 +19,24 @@
 
 
     <!-- app -->
-    <script src="app/bootstrap.js"></script>
-    <script src="app/app.js"></script>
+    <script src="app/bootstrap.js<?echo $scriptVersion?>"></script>
+    <script src="app/app.js<?echo $scriptVersion?>"></script>
     
     <!-- startup -->
-    <script src="app/startup/route-config.js"></script>
+    <script src="app/startup/route-config.js<?echo $scriptVersion?>"></script>
 
     <!-- directives -->
-    <script src="app/directives/widget.js"></script>
-	<script src="app/directives/pagination.js"></script>
+    <script src="app/directives/widget.js<?echo $scriptVersion?>"></script>
+	<script src="app/directives/pagination.js<?echo $scriptVersion?>"></script>
 
     <!-- controllers -->    
-    <script src="app/controllers/dashboard.js"></script>
-    <script src="app/controllers/stock.js"></script>
-    <script src="app/controllers/credits.js"></script>
-    <script src="app/controllers/orders.js"></script>
-    <script src="app/controllers/products.js"></script>
-    <script src="app/controllers/transactions.js"></script>
-	<script src="app/controllers/navigation.js"></script>
+    <script src="app/controllers/dashboard.js<?echo $scriptVersion?>"></script>
+    <script src="app/controllers/stock.js<?echo $scriptVersion?>"></script>
+    <script src="app/controllers/credits.js<?echo $scriptVersion?>"></script>
+    <script src="app/controllers/orders.js<?echo $scriptVersion?>"></script>
+    <script src="app/controllers/products.js<?echo $scriptVersion?>"></script>
+    <script src="app/controllers/transactions.js<?echo $scriptVersion?>"></script>
+	<script src="app/controllers/navigation.js<?echo $scriptVersion?>"></script>
 
     <!--  -->
 </head>

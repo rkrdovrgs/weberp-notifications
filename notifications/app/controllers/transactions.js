@@ -1,7 +1,7 @@
 ﻿angular.module('app').controller('transactions', function ($http, $scope) {
     var vm = this;
 
-    vm.title = 'Transacciones bancarias';
+    vm.title = 'Bank transactions';
 
     vm.transactions = [];
 

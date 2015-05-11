@@ -1,7 +1,7 @@
 ﻿angular.module('app').controller('orders', function ($http, $scope) {
     var vm = this;
 
-    vm.title = 'Historial de órdenes';
+    vm.title = 'Orders history';
 
     vm.orders = [];
 

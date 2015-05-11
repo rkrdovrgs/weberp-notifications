@@ -27,7 +27,7 @@
                     toastr.info(ntf.message);
             });
             if (data.notifications.length > 3)
-                toastr.warning('Hay mas notificaciones pendientes!');
+                toastr.warning('There are more pending notifications!');
 
         });
 

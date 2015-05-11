@@ -6,7 +6,7 @@
             <div class="col-md-2">
                 <div class="input-group input-group-sm">
 
-                    <input ng-model="vm.filters.client" type="text" class="form-control" placeholder="Cliente" aria-describedby="sizing-addon3">
+                    <input ng-model="vm.filters.client" type="text" class="form-control" placeholder="Customer" aria-describedby="sizing-addon3">
                     <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
 
                 </div>
@@ -14,7 +14,7 @@
             <div class="col-md-2">
                 <div class="input-group input-group-sm">
 
-                    <input ng-model="vm.filters.branch" type="text" class="form-control" placeholder="Sucursal" aria-describedby="sizing-addon3">
+                    <input ng-model="vm.filters.branch" type="text" class="form-control" placeholder="Branch" aria-describedby="sizing-addon3">
                     <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-search"></i></span>
 
                 </div>
@@ -24,7 +24,7 @@
                     <span class="input-group-addon" id="sizing-addon3">
                         <input ng-model="vm.filters.pendingOnly" type="checkbox">
                     </span>
-                    <label class="form-control">Pendientes</label>
+                    <label class="form-control">Pending</label>
                     
                 </div>
             </div>
@@ -32,9 +32,9 @@
             <div class="col-md-4">
                 <div class="input-group input-group-sm">
 
-                    <input ng-model="vm.filters.dateFrom" type="date" class="form-control" placeholder="Pedido [desde]" aria-describedby="sizing-addon3">
+                    <input ng-model="vm.filters.dateFrom" type="date" class="form-control" placeholder="Order date [from]" aria-describedby="sizing-addon3">
                     <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
-                    <input ng-model="vm.filters.dateTo" type="date" class="form-control" placeholder="Pedido [hasta]" aria-describedby="sizing-addon3">
+                    <input ng-model="vm.filters.dateTo" type="date" class="form-control" placeholder="Order date [to]" aria-describedby="sizing-addon3">
                     <span class="input-group-addon" id="sizing-addon3"><i class="glyphicon glyphicon-calendar"></i></span>
                 </div>
             </div>
@@ -50,14 +50,14 @@
         <table class="table table-condensed table-striped">
             <thead>
                 <tr>
-                    <th>No. de orden</th>
-                    <th>Cliente</th>
-                    <th>Sucursal</th>
+                    <th>Order No.</th>
+                    <th>Customer</th>
+                    <th>Branch</th>
                     <th>Ref #</th>
-                    <th>Fecha de pedido</th>
-                    <th>Fecha de entrega solicitada</th>
-                    <th>Total pedido</th>
-                    <th>Estado</th>
+                    <th>Order date</th>
+                    <th>Delivery date</th>
+                    <th>Total</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>

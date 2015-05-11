@@ -1,4 +1,5 @@
 <?php
+
 /* $Id: index.php 6941 2014-10-26 23:18:08Z daintree $*/
 
 $PageSecurity=0;
@@ -10,7 +11,11 @@ include('includes/header.inc');
 
 /*The module link codes are hard coded in a switch statement below to determine the options to show for each tab */
 include('includes/MainMenuLinksArray.php');
-
+if(isset($_SESSION['UserID']) && isset($_GET['returnUrl'])) {
+	$returnUrl = $_GET['returnUrl'];
+	header("Location: $returnUrl");
+	exit();
+}
 if (isset($SupplierLogin) AND $SupplierLogin==1){
 	echo '<table class="table_index">
 			<tr>

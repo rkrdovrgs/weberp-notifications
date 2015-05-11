@@ -9,7 +9,7 @@
                                 <div class="pull-left"><i class="glyphicon glyphicon-warning-sign"></i></div>
                                 <div class="datas-text pull-right">
                                     <span class="bold">{{vm.notificationTypeCounter.stock}}</span>
-                                    Productos bajos en stock
+                                    Products low in stock
                                 </div>
                                 <div class="clearfix"></div>
                             </a>
@@ -20,7 +20,7 @@
                                 <div class="pull-left"><i class="glyphicon glyphicon-credit-card"></i></div>
                                 <div class="datas-text pull-right">
                                     <span class="bold">{{vm.notificationTypeCounter.credits}}</span>
-                                    Créditos pendiente
+                                    Pending <br /> credits
                                 </div>
                                 <div class="clearfix"></div>
                             </a>
@@ -31,7 +31,7 @@
                                 <div class="pull-left"><i class="glyphicon glyphicon-flag"></i></div>
                                 <div class="datas-text pull-right">
                                     <span class="bold">{{vm.notificationTypeCounter.products}}</span>
-                                    Productos poco vendidos
+                                    Products low in sales
                                 </div>
                                 <div class="clearfix"></div>
                             </a>
@@ -43,19 +43,19 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="widget wblack">
-                        <div data-cc-widget-header title="Ultimas transacciones bancarias"
+                        <div data-cc-widget-header title="Latest bank transactions"
                              href="#/transactions"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
                             <table class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Fecha</th>
-                                        <th>Tipo</th>
+                                        <th>Date</th>
+                                        <th>Type</th>
                                         <th>No.</th>
                                         <th></th>
-                                        <th>Moneda</th>
-                                        <th>Cantidad</th>
+                                        <th>Currency</th>
+                                        <th>Amount</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -72,26 +72,26 @@
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix">
-                                <a href="#/transactions">Ver mas...</a>
+                                <a href="#/transactions">See more...</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="widget wblack">
-                        <div data-cc-widget-header title="Historial de ordenes"
+                        <div data-cc-widget-header title="Orders history"
                              href="#/orders"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
                             <table class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Orden</th>
-                                        <th>Cliente</th>
-                                        <th>Sucursal</th>
-                                        <th>Fecha</th>
+                                        <th>Order No.</th>
+                                        <th>Customer</th>
+                                        <th>Branch</th>
+                                        <th>Date</th>
                                         <th>Total</th>
-                                        <th>Estado</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -112,7 +112,7 @@
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix">
-                                <a href="#/orders">Ver mas...</a>
+                                <a href="#/orders">See more...</a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
 
         </div>
         <div class="container-fluid">
-            <h4 class="page-header">Notificaciones</h4>
+            <h4 class="page-header">Notifications</h4>
             <div class="row" ng-repeat="ntf in vm.notifications">
                 <div class="col-sm-12" ng-mouseover="ntf.isNew=false">
                     <p ng-class="{'bg-warning':ntf.isNew}">

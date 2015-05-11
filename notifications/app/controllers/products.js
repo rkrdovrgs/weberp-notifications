@@ -1,7 +1,7 @@
 ﻿angular.module('app').controller('products', function ($http, $scope) {
     var vm = this;
 
-    vm.title = 'Productos poco vendidos';
+    vm.title = 'Products low in sales';
 
     vm.products = [];
 

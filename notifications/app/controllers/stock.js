@@ -1,7 +1,7 @@
 ﻿angular.module('app').controller('stock', function ($http, $scope) {
     var vm = this;
 
-    vm.title = 'Stock de productos';
+    vm.title = 'Stock';
 
     vm.stock = [];
 

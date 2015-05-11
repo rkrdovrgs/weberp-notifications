@@ -30,7 +30,7 @@
 
 			foreach($stock as $st) {
 				$productDescription = $st->description;
-				$msg = "Producto \"$productDescription\" bajo en stock al realizar orden de venta #$orderno";
+				$msg = "Product \"$productDescription\" low in stock after sale order #$orderno";
 				mysql_query_exec("
 					insert into notification (notificationTypeId, message, userId) 
 					values($typeId, '$msg', '$userid')
@@ -41,7 +41,7 @@
 		case 'transactions':
 			$transactionType = $_GET['transactionType'];
 			$amount = $_GET['amount'];
-			$msg = "$userid registro una nueva transaccion bancaria. $transactionType de $amount";
+			$msg = "$userid registered a new bank transaction. $transactionType of $amount";
 			
 			mysql_query_exec("
 				insert into notification (notificationTypeId, message, userId) 
